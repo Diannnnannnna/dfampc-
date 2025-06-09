@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+       <!-- Tailwind CSS -->
+       <script src="https://cdn.tailwindcss.com"></script>
+
+       <!-- Custom Styles -->
+       <link href="/src/styles.css" rel="stylesheet">
+       <link href="/tailwind.css" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;700&display=swap" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@200;400;700&display=swap" rel="stylesheet">
+
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x/dist/cdn.min.js" defer></script>
+
+
+    <title>DFA Multi-Purpose Cooperative</title>
+    
+  </head>
+  <body class="font-montserrat max-w-[1280px]">
+    <!-- Navbar -->
+    <header class="w-screen bg-white border-b-[2px] border-[#F1F1F1] sticky top-0 left-0 z-50 py-4 px-6">
+      <div class="container mx-auto flex items-center justify-between">
+          <!-- Logo -->
+          <div class="flex items-center space-x-2">
+              <img src="DFAMPC Assets/dfampc.logo.webp" alt="DFA Cooperative Logo" class="h-10 w-10">
+              <div class="space-y-1">
+                  <h1 class="text-[15px] font-[400] leading-[100%] tracking-[0%] text-gray-800">Republic of the Philippines</h1>
+                  <h2 class="text-[15px] font-[700] leading-[100%] tracking-[0%] text-gray-800">DFA Multi-Purpose Cooperative</h2>
+              </div>
+          </div>
+
+           <!-- Navigation -->
+           <!-- Nav Links & Button -->
+          <div class="hidden md:flex items-center  space-x-[20px] ml-auto gap-4">
+            <a href="#" class="relative font-[400] mr-[-5px] text-[#222222] hover:text-[#222222] text-[15px]  
+                after:content-[''] after:absolute after:left-0 after:bottom-[-10px] 
+                after:h-[1px] after:w-full after:bg-[#198754]  
+                after:scale-x-0 after:transition-transform after:duration-300 
+                hover:after:scale-x-100">
+                Home
+            </a>
+            <a href="#" class="relative font-[400] text-[#222222] hover:text-[#222222] text-[15px]  
+                after:content-[''] after:absolute after:left-0 after:bottom-[-10px] 
+                after:h-[1px] after:w-full after:bg-[#198754] 
+                after:scale-x-0 after:transition-transform after:duration-300 
+                hover:after:scale-x-100">News & Events</a>
+            <a href="#" class="relative font-[400] text-[#222222] hover:text-[#222222] text-[15px]  
+                after:content-[''] after:absolute after:left-0 after:bottom-[-10px] 
+                after:h-[1px] after:w-full after:bg-[#198754] 
+                after:scale-x-0 after:transition-transform after:duration-300 
+                hover:after:scale-x-100">Careers</a>
+                <div class="relative group">
+                  <!-- Button -->
+                  <button class="peer flex items-center relative font-[400] text-[#222222] hover:text-[#222222] text-[15px]  
+                  after:content-[''] after:absolute after:left-0 after:bottom-[-10px] 
+                  after:h-[1px] after:w-full after:bg-[#198754]  
+                  after:scale-x-0 after:transition-transform after:duration-300 
+                  hover:after:scale-x-100">
+                      About Us 
+                      <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 011.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                      </svg>
+                  </button>
+              
+                  <!-- Dropdown Menu -->
+                  <div class="absolute hidden group-hover:block bg-white shadow-md mt-[25px] w-40">
+                    <a href="#" class="block px-4 py-3 text-[12px] font-[400] text-[#222222] hover:text-[#198754]">Our Organization</a>
+                    <a href="#" class="block px-4 py-3 text-[12px] font-[400] text-[#222222] hover:text-[#198754]">Organizational Chart</a>
+                    <a href="#" class="block px-4 py-3 text-[12px] font-[400] text-[#222222] hover:text-[#198754]">Management Chart</a>
+                    <a href="#" class="block px-4 py-3 text-[12px] font-[400] text-[#222222] hover:text-[#198754]">Business & Services</a>
+                    <a href="#" class="block px-4 py-3 text-[12px] font-[400] text-[#222222] hover:text-[#198754]">FAQs</a>
+                </div>
+              </div>
+              
+              
+
+            <!-- Button -->
+            <a href="#" class="bg-[#69C25F] text-[14px] text-white px-5 py-2.5 rounded-lg transition-colors duration-300 hover:bg-[#fff] hover:border hover:border-[#69C25F] hover:text-[#69C25F]">
+                Track Passport Delivery
+            </a>
+          </div>
+      </div>
+    </header>
+    <!-- More News and Events Section-->
+    <div class="top-0 w-screen mx-auto px-6 py-8">
+        <div class="max-w-2xl mx-auto text-center">
+            <div class="flex justify-center items-center mt-6">
+                <h2 class="text-green-700 text-3xl font-bold inline-block relative">
+                  News & Events
+                  <span class="block w-[65%] h-1 bg-[#DCF6CF] absolute mt-1 left-0"></span>
+                  <span class="block w-1/3 h-1 bg-[#198754] absolute mt-1 left-0"></span>
+                </h2>
+            </div>
+        
+            <!-- Event Card Container -->
+            <div class="mt-[60px] space-y-6">
+                <!-- Event Card 1 -->
+                <div class="flex flex-col md:flex-row items-center md:items-start border-b pb-5 mb-5">
+                    <div class="flex-1 text-left">
+                        <h3 class="text-[15px] font-[600] text-[#222222]">Cooperative Month Photo Booth 5</h3>
+                        <div class="flex items-center space-x-2 text-sm mt-2">
+                            <span class="bg-[#F2FFEB] text-[12px] text-[#198754] px-3 py-1 rounded-full">Event</span>
+                            <span class="bg-[#F1F1F1] text-[12px] text-[#222222] px-3 py-1 rounded-full flex items-center"> <img src="DFAMPC Assets/calendar.webp" alt="Calendar Icon" class="w-4 h-4 mr-1"> March 20, 2025</span>
+                        </div>
+                        <p class="text-[12px] text-[#222222] font-[400] mt-2">
+                            Celebrate Cooperative Month with a vibrant photo booth event, encouraging community members to
+                            capture memorable moments with friends and family...
+                        </p>
+                        <a href="#" class="text-[#198754] text-[12px] font-[700] mt-2 inline-flex items-center">
+                            Read more<svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="ml-4 mt-4 md:mt-0">
+                        <img src="DFAMPC Assets/event6.webp" alt="Cooperative Month Photo Booth 5"
+                            class="w-[250px] h-[150px] object-cover rounded-[10px] border border-[#198754]">
+                    </div>
+                </div>
+                <!-- Event Card 2 -->
+                <div class="flex flex-col md:flex-row items-center md:items-start border-b pb-5 mb-5">
+                    <div class="flex-1 text-left">
+                        <h3 class="text-[15px] font-[600] text-[#222222]">Cooperative Month Photo Booth 5</h3>
+                        <div class="flex items-center space-x-2 text-sm mt-2">
+                            <span class="bg-[#F2FFEB] text-[12px] text-[#198754] px-3 py-1 rounded-full">Event</span>
+                            <span class="bg-[#F1F1F1] text-[12px] text-[#222222] px-3 py-1 rounded-full flex items-center"> <img src="DFAMPC Assets/calendar.webp" alt="Calendar Icon" class="w-4 h-4 mr-1"> March 20, 2025</span>
+                        </div>
+                        <p class="text-[12px] text-[#222222] font-[400] mt-2">
+                            Celebrate Cooperative Month with a vibrant photo booth event, encouraging community members to
+                            capture memorable moments with friends and family...
+                        </p>
+                        <a href="#" class="text-[#198754] text-[12px] font-[700] mt-2 inline-flex items-center">
+                            Read more<svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="ml-4 mt-4 md:mt-0">
+                        <img src="DFAMPC Assets/event6.webp" alt="Cooperative Month Photo Booth 5"
+                            class="w-[250px] h-[150px] object-cover rounded-[10px] border border-[#198754]">
+                    </div>
+                </div>
+                <!-- Event Card 3 -->
+                <div class="flex flex-col md:flex-row items-center md:items-start border-b pb-5 mb-5">
+                    <div class="flex-1 text-left">
+                        <h3 class="text-[15px] font-[600] text-[#222222]">Cooperative Month Photo Booth 5</h3>
+                        <div class="flex items-center space-x-2 text-sm mt-2">
+                            <span class="bg-[#F2FFEB] text-[12px] text-[#198754] px-3 py-1 rounded-full">Event</span>
+                            <span class="bg-[#F1F1F1] text-[12px] text-[#222222] px-3 py-1 rounded-full flex items-center"> <img src="DFAMPC Assets/calendar.webp" alt="Calendar Icon" class="w-4 h-4 mr-1"> March 20, 2025</span>
+                        </div>
+                        <p class="text-[12px] text-[#222222] font-[400] mt-2">
+                            Celebrate Cooperative Month with a vibrant photo booth event, encouraging community members to
+                            capture memorable moments with friends and family...
+                        </p>
+                        <a href="#" class="text-[#198754] text-[12px] font-[700] mt-2 inline-flex items-center">
+                            Read more<svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="ml-4 mt-4 md:mt-0">
+                        <img src="DFAMPC Assets/event6.webp" alt="Cooperative Month Photo Booth 5"
+                            class="w-[250px] h-[150px] object-cover rounded-[10px] border border-[#198754]">
+                    </div>
+                </div>
+                <!-- Event Card 4 -->
+                <div class="flex flex-col md:flex-row items-center md:items-start border-b pb-5 mb-5">
+                    <div class="flex-1 text-left">
+                        <h3 class="text-[15px] font-[600] text-[#222222]">Cooperative Month Photo Booth 5</h3>
+                        <div class="flex items-center space-x-2 text-sm mt-2">
+                            <span class="bg-[#F2FFEB] text-[12px] text-[#198754] px-3 py-1 rounded-full">Event</span>
+                            <span class="bg-[#F1F1F1] text-[12px] text-[#222222] px-3 py-1 rounded-full flex items-center"> <img src="DFAMPC Assets/calendar.webp" alt="Calendar Icon" class="w-4 h-4 mr-1"> March 20, 2025</span>
+                        </div>
+                        <p class="text-[12px] text-[#222222] font-[400] mt-2">
+                            Celebrate Cooperative Month with a vibrant photo booth event, encouraging community members to
+                            capture memorable moments with friends and family...
+                        </p>
+                        <a href="#" class="text-[#198754] text-[12px] font-[700] mt-2 inline-flex items-center">
+                            Read more<svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="ml-4 mt-4 md:mt-0">
+                        <img src="DFAMPC Assets/event6.webp" alt="Cooperative Month Photo Booth 5"
+                            class="w-[250px] h-[150px] object-cover rounded-[10px] border border-[#198754]">
+                    </div>
+                </div>
+                <!-- Event Card 5 -->
+                <div class="flex flex-col md:flex-row items-center md:items-start border-b pb-5 mb-5">
+                    <div class="flex-1 text-left">
+                        <h3 class="text-[15px] font-[600] text-[#222222]">Cooperative Month Photo Booth 5</h3>
+                        <div class="flex items-center space-x-2 text-sm mt-2">
+                            <span class="bg-[#F2FFEB] text-[12px] text-[#198754] px-3 py-1 rounded-full">Event</span>
+                            <span class="bg-[#F1F1F1] text-[12px] text-[#222222] px-3 py-1 rounded-full flex items-center"> <img src="DFAMPC Assets/calendar.webp" alt="Calendar Icon" class="w-4 h-4 mr-1"> March 20, 2025</span>
+                        </div>
+                        <p class="text-[12px] text-[#222222] font-[400] mt-2">
+                            Celebrate Cooperative Month with a vibrant photo booth event, encouraging community members to
+                            capture memorable moments with friends and family...
+                        </p>
+                        <a href="#" class="text-[#198754] text-[12px] font-[700] mt-2 inline-flex items-center">
+                            Read more<svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="ml-4 mt-4 md:mt-0">
+                        <img src="DFAMPC Assets/event6.webp" alt="Cooperative Month Photo Booth 5"
+                            class="w-[250px] h-[150px] object-cover rounded-[10px] border border-[#198754]">
+                    </div>
+                </div>
+            </div>
+             <!-- Pagination at Bottom -->
+             <div class="mt-8">
+                <div class="flex justify-center">
+                    <button class="w-7 h-7 flex items-center justify-center text-[22px] text-[#D9D9D9] border">«</button>
+                    <button class="w-7 h-7 flex items-center justify-center text-[22px] text-[#D9D9D9] border">‹</button>
+                    <button class="w-7 h-7 flex items-center justify-center  border bg-white text-black font-[400] text[12px]">1</button>
+                    <button class="w-7 h-7 flex items-center justify-center  bg-green-700 text-white font-[400] text[12px]">2</button>
+                    <button class="w-7 h-7 flex items-center justify-center text-[22px] text-[#D9D9D9] border">›</button>
+                    <button class="w-7 h-7 flex items-center justify-center text-[22px] text-[#D9D9D9] border">»</button>
+                </div>
+              </div>
+        
+               
+        </div>
+        
+    </div>
+    
+   
+    
+    <footer class="w-screen bg-[#198754] text-[#F1F1F1] pt-8 pb-4 px-6">
+      <div class="container mx-auto grid grid-cols-1 md:grid-cols-3">
+        
+        <!-- Left Section -->
+        <div>
+          <div class="flex items-center space-x-2">
+            <img src="DFAMPC Assets/dfampc.logo.webp" alt="DFA Cooperative Logo" class="h-10 w-10">
+            <div class="space-y-1">
+              <h1 class="text-[15px] font-[400] leading-[100%] tracking-[0%]">Republic of the Philippines</h1>
+              <h2 class="text-[15px] font-[700] leading-[100%] tracking-[0%]">DFA Multi-Purpose Cooperative</h2>
+            </div>
+          </div>
+          <ul class="mt-4 space-y-1">
+            <li><a href="#" class="text-[12px] font-[400] text-[#F1F1F1] hover:underline">Home</a></li>
+            <li><a href="#" class="text-[12px] font-[400] text-[#F1F1F1] hover:underline">News & Events</a></li>
+            <li><a href="#" class="text-[12px] font-[400] text-[#F1F1F1] hover:underline">Careers</a></li>
+            <li><a href="#" class="text-[12px] font-[400] text-[#F1F1F1] hover:underline">About Us</a></li>
+            <li><a href="#" class="text-[12px] font-[200] text-[#F1F1F1] hover:underline">Our Organization</a></li>
+            <li><a href="#" class="text-[12px] font-[200] text-[#F1F1F1] hover:underline">Organizational Chart</a></li>
+            <li><a href="#" class="text-[12px] font-[200] text-[#F1F1F1] hover:underline">Business and Services</a></li>
+            <li><a href="#" class="text-[12px] font-[200] text-[#F1F1F1] hover:underline">FAQs</a></li>
+            <li><a href="#" class="text-[12px] font-[400] text-[#F1F1F1] hover:underline">Track Now</a></li>
+          </ul>
+        </div>
+    
+        <!-- Middle Section -->
+        <div class="ml-[-90px]">
+          <h3 class="font-[700] text-[15px] mb-2 leading-[100%] tracking-[0%] flex items-center">
+            <img src="DFAMPC Assets/location.webp" alt="Location Icon" class="w-5 h-5 mr-3">Office
+          </h3>
+          <p class="text-[12px] font-[200]">2330 Roxas Blvd, Pasay, 1300 Metro Manila</p>
+          <div class="flex flex-row w-full gap-[15px] items-start">
+            <div>
+              <h3 class="font-[700] text-[15px] mt-4 mb-2 leading-[100%] tracking-[0%] flex items-center">
+                <img src="DFAMPC Assets/email.webp" alt="Email Icon" class="w-5 h-5 mr-3">Emails
+              </h3>
+              <div>
+                <p class="text-[12px] font-[400]">For members:</p>
+                <a href="mailto:icare.member@dfampc.com" class="text-[#F1F1F1] text-[12px] font-[200]">icare.member@dfampc.com</a>
+              </div>
+              <div>
+                <p class="text-[12px] font-[400]">For loans:</p>
+                <a href="mailto:loan.management@dfampc.com" class="text-[#F1F1F1] text-[12px] font-[200]">loan.management@dfampc.com</a>
+              </div>
+              <h3 class="font-[700] mt-4 text-[15px] mb-2 leading-[100%] tracking-[0%] flex items-center">Social Links</h3>
+              <div class="flex gap-2">
+                <img src="DFAMPC Assets/facebook.webp" alt="Facebook Icon" class="w-8 h-8 mr-1">
+                <img src="DFAMPC Assets/youtube.webp" alt="YouTube Icon" class="w-8 h-8 mr-1">
+              </div>
+            </div>
+            <div>
+              <h3 class="font-[700] text-[15px] mt-5 mb-2 leading-[100%] tracking-[0%] flex items-center">
+                <img src="DFAMPC Assets/phone.webp" alt="Phone Icon" class="w-4 h-4 mr-3">Telephone No.
+              </h3>
+              <p class="text-[12px] font-[200] font-dmsans">02-8834-4939</p>
+              <p class="text-[12px] font-[200] font-dmsans mt-1">02-8834-4829</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Contact Us Section (Right Section) -->
+        <div class="ml-[-120px]">
+          <h2 class="font-[700] text-[18px]">Contact Us</h2>
+          <p class="font-[400] text-[16px]">For feedback, comments, or service requests, feel free to contact us!</p>
+    
+          <form class="mt-6 space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label for="name" class="font-[700] text-[12px] block mb-1">Name</label>
+                <input type="text" id="name" class="w-full p-1 bg-[#FFFFFF] border-[#F1F1F1] rounded-[10px] text-black">
+              </div>
+              <div>
+                <label for="email" class="font-bold block text-[12px] mb-1">Email</label>
+                <input type="email" id="email" class="w-full p-1 bg-[#FFFFFF] border-[#F1F1F1] rounded-[10px] text-black">
+              </div>
+            </div>
+    
+            <div class="relative">
+              <label for="subject" class="font-[700] text-[12px] block mb-1">Subject</label>
+              <select id="subject" class="w-full p-2 bg-[#FFFFFF] border-[#F1F1F1] rounded-[10px] text-[12px] font-[400] text-[#6C757D] appearance-none">
+                  <option disabled selected>Choose a Category</option>
+                  <option value="math">Category1</option>
+                  <option value="science">Category2</option>
+              </select>
+              <!-- Chevron Down Icon -->
+              <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none mt-[20px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#198754]" viewBox="0 0 24 24" fill="currentColor">
+                      <path fill-rule="evenodd" d="M19.707 8.293a1 1 0 00-1.414 0L12 14.586 5.707 8.293a1 1 0 00-1.414 1.414l7 7a1 1 0 001.414 0l7-7a1 1 0 000-1.414z" clip-rule="evenodd"/>
+                  </svg>
+              </div>
+            </div>
+    
+            <div>
+              <label for="message" class="font-[700] text-[12px] block mb-1">Message</label>
+              <textarea id="message" rows="3" class="w-full p-2 bg-[#FFFFFF] border-[#F1F1F1] rounded-[10px] text-black"></textarea>
+            </div>
+    
+            <div class="text-right">
+              <button class= "bg-[#69C25F] text-[12px] text-white px-4 py-[6.5px] rounded-[20px] ml-auto transition-colors duration-300 hover:bg-[#fff] hover:border hover:border-[#69C25F] hover:text-[#69C25F]">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    
+      <!-- Bottom Section -->
+      <div class="flex justify-center items-center text-[#f1f1f1]">
+        <p class="mr-6 text-[14px] font-[400] font-dmsans">Copyright © 2024 DFA Multi-Purpose Cooperative</p>
+        <div class="h-[30px] w-[1px] bg-white"></div>
+        <p class="flex mt-0.5 ml-6 text-[14px] font-[400] font-dmsans">
+          Developed and Powered by <img src="DFAMPC Assets/skyward.webp" alt="Skyward Logo" class="h-6 ml-2">
+        </p>
+      </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

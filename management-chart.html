@@ -1,0 +1,484 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+       <!-- Tailwind CSS -->
+       <script src="https://cdn.tailwindcss.com"></script>
+
+       <!-- Custom Styles -->
+       <link href="/src/styles.css" rel="stylesheet">
+       <link href="/tailwind.css" rel="stylesheet">
+       <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x/dist/cdn.min.js" defer></script>
+
+
+    <title>Management Chart-DFA Multi-Purpose Cooperative</title>
+    
+  </head>
+  <body class="font-opensans max-w-[1280px]">
+     <!-- Navbar -->
+     <header class="w-screen bg-white border-b-2 border-[#F1F1F1] sticky top-0 left-0 z-50 py-4 px-6">
+      <div class="container mx-auto flex items-center justify-between">
+          <!-- Logo -->
+          <div class="flex items-center space-x-2">
+            <img src="DFAMPC Assets/dfampc.logo.webp" alt="DFA Cooperative Logo" class="h-10 w-10">
+            <div class="space-y-1">
+                <h1 class="text-sm font-normal leading-[100%] tracking-[0%] text-gray-800 hidden md:block">Republic of the Philippines</h1>
+                <h2 class="text-sm font-bold leading-[100%] tracking-[0%] text-gray-800 hidden md:block">DFA Multi-Purpose Cooperative</h2>
+            </div>
+          </div>
+          <!-- Menu Button (Mobile) -->
+          <div class="flex gap-2">
+              <button class="lg:hidden bg-[#69C25F] p-2 rounded-lg focus:outline-none">
+                <img src="DFAMPC Assets/track.webp" alt="Track" class="h-5 w-5">
+              </button>
+              <button id="menu-toggle" class="lg:hidden text-[#222222] border p-2 rounded-lg focus:outline-none">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+              </button>
+          </div>
+          <!-- Nav Links & Button -->
+          <div class="hidden lg:flex lg:ml-20 md:hidden items-center  space-x-[20px] xl:ml-80 gap-4">
+            <a href="index.html" class="font-opensans relative font-normal mr-[-5px] text-[#222222] hover:text-[#222222] text-sm  
+                after:content-[''] after:absolute after:left-0 after:bottom-[-6px] 
+                after:h-[1.5px] after:w-full after:bg-[#198754]  
+                after:scale-x-0 after:transition-transform after:duration-300 
+                hover:after:scale-x-100">
+                Home
+            </a>
+            <a href="news-and-events.html" class="relative font-normal text-[#222222] hover:text-[#222222] text-sm 
+                after:content-[''] after:absolute after:left-0 after:bottom-[-6px] 
+                after:h-[1px] after:w-full after:bg-[#198754] 
+                after:scale-x-0 after:transition-transform after:duration-300 
+                hover:after:scale-x-100">News & Events</a>
+            <a href="careers.html" class="relative font-normal text-[#222222] hover:text-[#222222] text-sm 
+                after:content-[''] after:absolute after:left-0 after:bottom-[-6px] 
+                after:h-[1px] after:w-full after:bg-[#198754] 
+                after:scale-x-0 after:transition-transform after:duration-300 
+                hover:after:scale-x-100">Careers</a>
+                <div class="relative group dropdown">
+                  <!-- Button -->
+                  <button id="dropdownButton" class="py-2  flex items-center relative font-normal text-[#222222] hover:text-[#222222] text-sm  
+                  after:content-[''] after:absolute after:left-0 after:bottom-0 
+                  after:h-[1px] after:w-full after:bg-[#198754]  
+                  after:scale-x-0 after:transition-transform after:duration-300 
+                  hover:after:scale-x-100">
+                      About Us 
+                      <svg id="chevronIcon" class="w-4 h-4 ml-1 transition-transform duration-300" 
+                          fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                      </svg>
+                  </button>
+                  <!-- Dropdown Menu -->
+                  <div id="dropdownMenu" class="absolute mt-1 hidden group-hover:block dropdown-menu bg-white ml-[-44px] w-44 z-50">
+                    <div class="h-4 bg-transparent opacity-0"></div>
+                    <ul class="border">
+                      <li><a href="about-us.html" class="block px-4 py-3 text-sm font-normal text-[#222222] hover:text-[#198754]">Our Organization</a></li>
+                      <li><a href="organizational-chart.html" class="block px-4 py-3 text-sm font-normal text-[#222222] hover:text-[#198754]">Organizational Chart</a></li>
+                      <li><a href="management-chart.html" class="block px-4 py-3 text-sm font-normal text-[#222222] hover:text-[#198754]">Management Chart</a></li>
+                      <li><a href="business-and-services.html" class="block px-4 py-3 text-sm font-normal text-[#222222] hover:text-[#198754]">Business & Services</a></li>
+                      <li><a href="faqs.html" class="block px-4 py-3 text-sm font-normal text-[#222222] hover:text-[#198754]">FAQs</a></li>
+                    </ul>
+                  </div>
+                </div>
+          </div>
+          <!-- Button -->
+          <a href="#" class="hidden md:hidden lg:inline-block bg-[#198754] text-sm text-white px-5 py-2.5 rounded-lg border border-transparent transition-colors duration-300 hover:bg-[#fff] hover:border-[#198754] hover:text-[#198754]">
+            Track Passport Delivery
+          </a>
+      </div>
+    </header>
+
+    <!-- Sidebar Navigation (Mobile) -->
+    <div id="sidebar" class="fixed top-0 right-0 w-64 md:w-72 lg:w-80 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+      <!-- Sidebar Header -->
+      <div class="flex items-center justify-start px-4 py-4 border-b">
+        <button id="close-sidebar" class="text-[#222222] focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+        <h2 class="text-lg font-semibold ml-4">Menu</h2>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="p-4 flex flex-col md:flex-col space-y-2 text-[#222222]">
+        <a href="index.html" class="mobile-link hover:text-[#198754]">Home</a>
+        <a href="news-and-events.html" class="mobile-link hover:text-[#198754]">News & Events</a>
+        <a href="careers.html" class="mobile-link hover:text-[#198754]">Careers</a>
+
+        <!-- About Us (Always Visible & Indented) -->
+        <div class="relative">
+          <p class="mobile-link">About Us</p>
+          <div id="about-menu" class="ml-4 space-y-2">
+            <a href="about-us.html" class="mobile-dropdown-item mt-2 block hover:text-[#198754]">Our Organization</a>
+            <a href="organizational-chart.html" class="mobile-dropdown-item block hover:text-[#198754]">Organizational Chart</a>
+            <a href="management-chart.html" class="mobile-dropdown-item block hover:text-[#198754]">Management Chart</a>
+            <a href="business-and-services.html" class="mobile-dropdown-item block hover:text-[#198754]">Business & Services</a>
+            <a href="faqs.html" class="mobile-dropdown-item block hover:text-[#198754]">FAQs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+
+    <!-- Management Chart -->
+    <section class="top-0 w-screen mx-auto py-8">
+        <div class="flex justify-center items-center mt-6">
+            <h2 class="text-green-700 text-2xl sm:text-3xl font-bold inline-block relative">
+              Management Chart
+              <span class="block w-[49%] h-1 bg-[#DCF6CF] absolute mt-1 left-0"></span>
+              <span class="block w-[25%] h-1 bg-[#198754] absolute mt-1 left-0"></span>
+            </h2>
+        </div>
+        <div class="max-w-5xl mx-auto text-center py-12">
+    
+        <!-- General Assembly -->
+        <h3 class="text-xl font-bold text-[#198754] mb-4">
+            DFAMPC Management
+        </h3>
+       
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 px-6 mb-12">
+                <div class="bg-white border py-4 px-6 md:col-span-2 lg:col-start-2 rounded-lg flex flex-col md:flex-row items-center gap-4">
+                    <img src="DFAMPC Assets/girl.webp" class="w-20 h-20 bg-top object-cover rounded-full">
+                    <div class="text-center md:text-left">
+                        <p class="font-[700] text-[#222222] text-xs sm:text-sm">Athena Careagay</p>
+                        <p class="text-[#6C757D]  text-xs font-medium">General Manager</p>
+                    </div>
+                </div>
+                <div class="bg-white border py-4 px-6 md:col-span-2 rounded-lg flex flex-col md:flex-row items-center gap-4">
+                    <img src="DFAMPC Assets/girl.webp" class="w-20 h-20 bg-top object-cover rounded-full">
+                    <div class="text-center md:text-left">
+                        <p class="font-[700] text-[#222222] text-xs sm:text-sm">Jemmalyln Lucero</p>
+                        <p class="text-[#6C757D] text-xs font-medium">HR Officer</p>
+                    </div>
+                </div>
+            </div>
+       
+        <!-- Operations -->
+        <h3 class="text-xl font-bold text-[#198754] mb-4">
+            Operations
+        </h3>
+        <div class="grid grid-cols-2 lg:grid-cols-3 px-6 gap-4">
+            <!-- Member 1 -->
+            <div class="bg-white border py-4 px-6 rounded-lg flex flex-col md:flex-row items-center gap-4">
+                <img src="DFAMPC Assets/girl.webp" class="w-20 h-20 bg-top object-cover rounded-full">
+                <div class="text-center md:text-left">
+                    <p class="font-[700] text-[#222222] text-xs sm:text-sm">Camille Valerio</p>
+                    <p class="text-[#6C757D] text-xs font-medium">Operation Head</p>
+                </div>
+            </div>
+            <!-- Member 2 -->
+            <div class="bg-white border py-4 px-6 rounded-lg flex flex-col md:flex-row items-center gap-4">
+                <img src="DFAMPC Assets/boy.webp" class="w-20 h-20 bg-top object-cover rounded-full">
+                <div class="text-center md:text-left">
+                    <p class="font-[700] text-[#222222] text-xs sm:text-sm">Phil Kevin Idamla</p>
+                    <p class="text-[#6C757D] text-xs font-medium">Operation Supervisor</p>
+                </div>
+            </div>
+            <!-- Member 3 -->
+            <div class="bg-white border py-4 px-6 rounded-lg flex flex-col md:flex-row items-center gap-4">
+                <img src="DFAMPC Assets/girl.webp" class="w-20 h-20 bg-top object-cover rounded-full">
+                <div class="text-center md:text-left">
+                    <p class="font-[700] text-[#222222] text-xs sm:text-sm">Florie Tito</p>
+                    <p class="text-[#6C757D] text-xs font-medium">Operation</p>
+                </div>
+            </div>
+            <!-- Member 4 -->
+            <div class="bg-white border py-4 px-6 lg:col-start-2 rounded-lg flex flex-col md:flex-row items-center gap-4">
+                <img src="DFAMPC Assets/boy.webp" class="w-20 h-20 bg-top object-cover rounded-full">
+                <div class="text-center md:text-left">
+                    <p class="font-[700] text-[#222222] text-xs sm:text-sm">Fernando Ladrica</p>
+                    <p class="text-[#6C757D] text-xs font-medium">Operation Staff</p>
+                </div>
+            </div>
+        </div>
+         <!-- Accounting Unit -->
+         <h3 class="text-xl font-bold text-[#198754] mt-12 mb-4">
+            Accounting Unit
+        </h3>
+        <div class="grid grid-cols-4 lg:grid-cols-3 gap-4 px-6">
+            <!-- Member 1 -->
+            <div class="bg-white border py-4 px-6 col-span-2 col-start-2 lg:col-start-2 lg:col-span-1 rounded-lg flex flex-col md:flex-row items-center gap-4">
+                <img src="DFAMPC Assets/boy.webp" class="w-20 h-20 bg-top object-cover rounded-full">
+                <div class="text-center md:text-left">
+                    <p class="font-[700] text-[#222222] text-xs sm:text-sm">Nabil Pagandaman</p>
+                    <p class="text-[#6C757D] text-xs font-medium">Chief Accountant</p>
+                </div>
+            </div>
+        </div>
+         <!-- Credit And Loan -->
+         <h3 class="text-xl font-bold text-[#198754] mt-12 mb-4">
+            Credit & Loan
+        </h3>
+        <div class="grid grid-cols-4 lg:grid-cols-3 gap-4 px-6">
+            <!-- Member 1 -->
+            <div class="bg-white border py-4 px-6 col-span-2 lg:col-span-1 col-start-2 lg:col-start-2 rounded-lg flex flex-col md:flex-row items-center gap-4">
+                <img src="DFAMPC Assets/boy.webp" class="w-20 h-20 bg-top object-cover rounded-full">
+                <div class="text-center md:text-left">
+                    <p class="font-[700] text-[#222222] text-xs sm:text-sm">Ricky Sumala</p>
+                    <p class="text-[#6C757D] text-xs font-medium">Credit & Collection Officer
+                    </p>
+                </div>
+            </div>
+        </div>
+         <!-- Finance unit -->
+         <h3 class="text-xl font-bold text-[#198754] mt-12 mb-4">
+            Finance Unit
+        </h3>
+        <div class="grid grid-cols-4 lg:grid-cols-3 px-6 gap-4">
+            <!-- Member 1 -->
+            <div class="bg-white border col-span-2 lg:col-span-1 py-4 px-6 rounded-lg flex flex-col md:flex-row items-center gap-4">
+                <img src="DFAMPC Assets/boy.webp" class="w-20 h-20 bg-top object-cover rounded-full">
+                <div class="text-center md:text-left">
+                    <p class="font-[700] text-[#222222] text-xs sm:text-sm">Aiman Casaban</p>
+                    <p class="text-[#6C757D] text-xs font-medium">Jr. Accountant</p>
+                </div>
+            </div>
+            <!-- Member 2 -->
+            <div class="bg-white border col-span-2 lg:col-span-1 py-4 px-6 rounded-lg flex flex-col md:flex-row items-center gap-4">
+                <img src="DFAMPC Assets/girl.webp" class="w-20 h-20 bg-top object-cover rounded-full">
+                <div class="text-center md:text-left">
+                    <p class="font-[700] text-[#222222] text-xs sm:text-sm">Ma Madonna Jennifer Sepnio</p>
+                    <p class="text-[#6C757D] text-xs font-medium">Bookkeeper</p>
+                </div>
+            </div>
+            <!-- Member 3 -->
+            <div class="bg-white border col-span-2 col-start-2 lg:col-start-3 lg:col-span-1 py-4 px-6 rounded-lg flex flex-col md:flex-row items-center gap-4">
+                <img src="DFAMPC Assets/boy.webp" class="w-20 h-20 bg-top object-cover rounded-full">
+                <div class="text-center md:text-left">
+                    <p class="font-[700] text-[#222222] text-xs sm:text-sm">John Edward Sio</p>
+                    <p class="text-[#6C757D] text-xs font-medium">Loan Officer</p>
+                </div>
+            </div>
+        </div>
+         <!-- Administrative Unit -->
+         <h3 class="text-xl font-bold text-[#198754] mt-12 mb-4">
+            Administrative Unit
+        </h3>
+        <div class="grid grid-cols-4 lg:grid-cols-3 gap-4 px-6">
+            <!-- Member 1 -->
+            <div class="bg-white border py-4 px-6 col-span-2 lg:col-span-1 col-start-2 lg:col-start-2 rounded-lg flex flex-col md:flex-row items-center gap-4">
+                <img src="DFAMPC Assets/girl.webp" class="w-20 h-20 bg-top object-cover rounded-full">
+                <div class="text-center md:text-left">
+                    <p class="font-[700] text-[#222222] text-xs sm:text-sm">Ma. Jovelyn Tinio</p>
+                    <p class="text-[#6C757D] text-xs font-medium">Administrative Officer</p>
+                </div>
+            </div>
+        </div>
+        <!-- Administrative Staff -->
+        <h3 class="text-xl font-bold text-[#198754] mt-12 mb-4">
+            Administrative Staff
+        </h3>
+        <div class="grid grid-cols-2 lg:grid-cols-3 px-6 gap-4">
+            <!-- Member 1 -->
+            <div class="bg-white border py-4 px-6 rounded-lg flex flex-col md:flex-row items-center gap-4">
+                <img src="DFAMPC Assets/girl.webp" class="w-20 h-20 bg-top object-cover rounded-full">
+                <div class="text-center md:text-left">
+                    <p class="font-[700] text-[#222222] text-xs sm:text-sm">Cheryl Casuga</p>
+                    <p class="text-[#6C757D] text-xs font-medium">HR Associate</p>
+                </div>
+            </div>
+            <!-- Member 2 -->
+            <div class="bg-white border py-4 px-6 rounded-lg flex flex-col md:flex-row items-center gap-4">
+                <img src="DFAMPC Assets/girl.webp" class="w-20 h-20 bg-top object-cover rounded-full">
+                <div class="text-center md:text-left">
+                    <p class="font-[700] text-[#222222] text-xs sm:text-sm">Rona Jimenez</p>
+                    <p class="text-[#6C757D] text-xs font-medium">Administrative Assistant</p>
+                </div>
+            </div>
+            <!-- Member 3 -->
+            <div class="bg-white border py-4 px-6 rounded-lg flex flex-col md:flex-row items-center gap-4">
+                <img src="DFAMPC Assets/girl.webp" class="w-20 h-20 bg-top object-cover rounded-full">
+                <div class="text-center md:text-left">
+                    <p class="font-[700] text-[#222222] text-xs sm:text-sm">Aileen Cruz</p>
+                    <p class="text-[#6C757D] text-xs font-medium">Cashier Specialist</p>
+                </div>
+            </div>
+            <!-- Member 4 -->
+            <div class="bg-white border py-4 px-6 rounded-lg flex flex-col md:flex-row items-center gap-4">
+                <img src="DFAMPC Assets/boy.webp" class="w-20 h-20 bg-top object-cover rounded-full">
+                <div class="text-center md:text-left">
+                    <p class="font-[700] text-[#222222] text-xs sm:text-sm">Abner Santos</p>
+                    <p class="text-[#6C757D] text-xs font-medium">Property Custodian</p>
+                </div>
+            </div>
+             <!-- Member 5 -->
+             <div class="bg-white border py-4 px-6 rounded-lg flex flex-col md:flex-row items-center gap-4">
+                <img src="DFAMPC Assets/boy.webp" class="w-20 h-20 bg-top object-cover rounded-full">
+                <div class="text-center md:text-left">
+                    <p class="font-[700] text-[#222222] text-xs sm:text-sm">Ulyses Bañas</p>
+                    <p class="text-[#6C757D] text-xs font-medium">Purchaser/Stockholder</p>
+                </div>
+            </div>
+             <!-- Member 6 -->
+             <div class="bg-white border py-4 px-6 rounded-lg flex flex-col md:flex-row items-center gap-4">
+                <img src="DFAMPC Assets/boy.webp" class="w-20 h-20 bg-top object-cover rounded-full">
+                <div class="text-center md:text-left">
+                    <p class="font-[700] text-[#222222] text-xs sm:text-sm">Mark Joshua Marquez</p>
+                    <p class="text-[#6C757D] text-xs font-medium">Company Driver</p>
+                </div>
+            </div>
+        </div> 
+         <!-- Technical -->
+         <h3 class="text-xl font-bold text-[#198754] mt-12 mb-4">
+            Technical
+        </h3>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 px-6  mb-2">
+            <div class="bg-white border py-4 px-6 md:col-span-2 lg:col-start-2 rounded-lg flex flex-col md:flex-row items-center gap-4">
+                <img src="DFAMPC Assets/girl.webp" class="w-20 h-20 bg-top object-cover rounded-full">
+                <div class="text-center md:text-left">
+                    <p class="font-[700] text-[#222222] text-xs sm:text-sm">Randie Siroy</p>
+                    <p class="text-[#6C757D] text-xs font-medium">IT Officer I</p>
+                </div>
+            </div>
+            <div class="bg-white border py-4 px-6 md:col-span-2 rounded-lg flex flex-col md:flex-row items-center gap-4">
+                <img src="DFAMPC Assets/girl.webp" class="w-20 h-20 bg-top object-cover rounded-full">
+                <div class="text-center md:text-left">
+                    <p class="font-[700] text-[#222222] text-xs sm:text-sm">Jusarrell Origines</p>
+                    <p class="text-[#6C757D] text-xs font-medium">IT Officer II</p>
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </section>
+            
+    <!-- Footer Section -->
+    <footer class="w-screen bg-[#198754] text-[#F1F1F1] pt-8 pb-4 px-6">
+      <div class="container mx-auto">
+      <div class="flex items-center space-x-2">
+        <img src="DFAMPC Assets/dfampc.logo.webp" alt="DFA Cooperative Logo" class="h-10 w-10">
+        <div class="space-y-1">
+          <h1 class="text-sm font-normal leading-[100%] tracking-[0%]">Republic of the Philippines</h1>
+          <h2 class="text-sm font-normal leading-[100%] tracking-[0%]">DFA Multi-Purpose Cooperative</h2>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 :grid-cols-2 xl:grid-cols-6 xl:gap-8 md:gap-12">
+        
+        <!-- Left Section -->
+        <div class="mt-4 sm:block hidden">
+          <ul>
+            <li><a href="index.html" class="text-xs font-normal text-[#F1F1F1] hover:text-[#dadada]">Home</a></li>
+            <li><a href="new-and-events.html" class="text-xs font-normal text-[#F1F1F1] hover:text-[#dadada]">News & Events</a></li>
+            <li><a href="careers.html" class="text-xs font-normal text-[#F1F1F1] hover:text-[#dadada]">Careers</a></li>
+            <li><a href="about-us.html" class="text-xs font-normal text-[#F1F1F1] hover:text-[#dadada]">About Us</a></li>
+            <li><a href="about-us.html" class="ml-2 text-xs font-extralight text-[#F1F1F1] hover:text-[#dadada]">Our Organization</a></li>
+            <li><a href="organizational-chart.html" class="ml-2 text-xs font-extralight text-[#F1F1F1] hover:text-[#dadada]">Organizational Chart</a></li>
+            <li><a href="business-and-services.html" class="ml-2 text-xs font-extralight text-[#F1F1F1] hover:text-[#dadada]">Business and Services</a></li>
+            <li><a href="faqs.html" class="ml-2 text-xs font-extralight text-[#F1F1F1] hover:text-[#dadada]">FAQs</a></li>
+          </ul>
+          <button class= "bg-[#69C25F] text-xs text-[#F1F1F1] px-4 py-[6.5px] rounded-full mt-2 border border-[#69C25F] transition-colors duration-300 hover:bg-[#198754] hover:border-white hover:text-white">Track Passport Delivery</button>
+        </div>
+
+        <!-- Middle Section -->
+        <div class="mt-4 xl:ml-0 py-2 md:ml-[-25px] xl:col-span-2">
+          <h3 class="font-bold text-sm text-[#F1F1F1] mb-1 leading-[100%] tracking-[0%] flex items-center">
+            <img src="DFAMPC Assets/location.webp" alt="Location Icon" class="w-5 h-5 mr-3">Office
+          </h3>
+          <a href="https://maps.app.goo.gl/NRJznTiXoyPkppko9" 
+            target="_blank" 
+            class="text-xs font-extralight no-underline hover:text-[#dadada] text-[#F1F1F1]">
+              2330 Roxas Blvd, Pasay, 1300 Metro Manila
+          </a>
+          <div class="flex flex-col sm:flex-row w-full gap-4 items-start">
+            <div>
+              <h3 class="font-bold text-sm text-[#F1F1F1] mt-4 mb-2 leading-[100%] tracking-[0%] flex items-center">
+                <img src="DFAMPC Assets/email.webp" alt="Email Icon" class="w-5 h-5 mr-3">Emails
+              </h3>
+              <div>
+                <p class="text-xs font-normal">For members:</p>
+                <a href="mailto:icare.member@dfampc.com" class="text-[#F1F1F1] text-xs font-extralight">icare.member@dfampc.com</a>
+              </div>
+              <div>
+                <p class="text-xs font-normal mt-1">For loans:</p>
+                <a href="mailto:loan.management@dfampc.com" class="text-[#F1F1F1] text-xs font-extralight">loan.management@dfampc.com</a>
+              </div>
+              <h3 class="font-bold mt-4 text-[#F1F1F1] text-sm mb-3 leading-[100%] tracking-[0%] flex items-center">Social Links</h3>
+              <div class="flex gap-2">
+                <!-- Facebook Icon -->
+                <a href=" https://www.facebook.com/dfampc.social/" target="_blank">
+                    <img src="DFAMPC Assets/facebook.webp" alt="Facebook Icon" class="w-8 h-8 mr-1">
+                </a>
+                <!-- YouTube Icon -->
+                <a href="https://www.youtube.com/@DFAMPC" target="_blank">
+                    <img src="DFAMPC Assets/youtube.webp" alt="YouTube Icon" class="w-8 h-8 mr-1">
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-bold text-sm text-[#F1F1F1] sm:mt-5 mb-2 leading-[100%] tracking-[0%] flex items-center">
+                <img src="DFAMPC Assets/phone.webp" alt="Phone Icon" class="w-4 h-4 mr-3">Telephone No.
+              </h3>
+              <p class="text-xs font-extralight">02-8834-4939</p>
+              <p class="text-xs font-extralight mt-1">02-8834-4829</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Us Section (Right Section) -->
+        <div class="mt-6.5 xl:col-span-3 md:col-span-2 bg-[#F1F1F1] p-6 rounded-[10px]">
+          <h2 class="font-bold text-gray-900 text-lg">Contact Us</h2>
+          <p class="font-normal text-gray-900 text-sm">For feedback, comments, or service requests, feel free to contact us!</p>
+
+          <form class="mt-6 text-gray-900 space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label for="name" class="font-bold text-xs block mb-1">Name</label>
+                <input type="text" id="name"   class="w-full py-2 px-2 text-xs bg-[#F1F1F1] border border-gray-400
+                rounded-lg text-black focus:outline-none focus:border-[#198754]">
+              </div>
+              <div>
+                <label for="email" class="font-bold block text-xs mb-1">Email</label>
+                <input type="email" id="email"   class="w-full py-2 px-2 text-xs bg-[#F1F1F1] border border-gray-400
+                rounded-lg text-black focus:outline-none focus:border-[#198754]">
+              </div>
+            </div>
+
+            <div class="relative">
+              <label for="subject" class="font-bold text-xs block mb-1">Subject</label>
+              <select id="subject" class="w-full p-2 bg-[#F1F1F1] italic border border-gray-400 rounded-lg text-xs font-[400] text-[#6C757D] appearance-none focus:outline-none focus:border-[#198754]">
+                  <option class="not-italic" disabled selected>Choose a Category</option>
+                  <option class="not-italic" value="category1">Category1</option>
+                  <option class="not-italic" value="category2">Category2</option>
+              </select>
+              <!-- Chevron Down Icon -->
+              <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none mt-[20px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#198754]" viewBox="0 0 24 24" fill="currentColor">
+                      <path fill-rule="evenodd" d="M19.707 8.293a1 1 0 00-1.414 0L12 14.586 5.707 8.293a1 1 0 00-1.414 1.414l7 7a1 1 0 001.414 0l7-7a1 1 0 000-1.414z" clip-rule="evenodd"/>
+                  </svg>
+              </div>
+            </div>
+
+            <div>
+              <label for="message" class="font-bold text-xs block mb-1">Message</label>
+              <textarea id="message" rows="3" class="w-full text-xs p-2 bg-[#F1F1F1] border border-gray-400 rounded-lg text-black focus:outline-none focus:border-[#198754]"></textarea>
+            </div>
+
+            <div class="text-right">
+              <button class= "bg-[#69C25F] text-xs text-white px-4 py-2 rounded-2xl ml-auto border border-[#69C25F] transition-colors duration-300 hover:bg-[#f1f1f1] hover:border-[#69C25F] hover:text-[#69C25F]">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="flex justify-center items-center text-[#f1f1f1] mt-12">
+        <p class="text-xs sm:text-sm text-center font-normal">Copyright © 2024 DFA Multi-Purpose Cooperative
+        </p>
+        <span class="h-7 w-px bg-white mx-4"></span>
+        <p class="text-xs sm:text-sm text-center font-normal">Developed and Powered by <img src="DFAMPC Assets/skyward.webp" alt="Skyward Logo" class="h-4 sm:h-6 inline"></p>
+      </div>
+    </div> 
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
