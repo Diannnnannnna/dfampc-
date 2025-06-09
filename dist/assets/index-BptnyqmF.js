@@ -1,0 +1,116 @@
+(function(){const e=document.createElement("link").relList;if(e&&e.supports&&e.supports("modulepreload"))return;for(const s of document.querySelectorAll('link[rel="modulepreload"]'))n(s);new MutationObserver(s=>{for(const c of s)if(c.type==="childList")for(const h of c.addedNodes)h.tagName==="LINK"&&h.rel==="modulepreload"&&n(h)}).observe(document,{childList:!0,subtree:!0});function i(s){const c={};return s.integrity&&(c.integrity=s.integrity),s.referrerPolicy&&(c.referrerPolicy=s.referrerPolicy),s.crossOrigin==="use-credentials"?c.credentials="include":s.crossOrigin==="anonymous"?c.credentials="omit":c.credentials="same-origin",c}function n(s){if(s.ep)return;s.ep=!0;const c=i(s);fetch(s.href,c)}})();document.addEventListener("DOMContentLoaded",function(){if(console.log("DOM fully loaded!"),typeof Swiper>"u"){console.error("Swiper library is missing!");return}new Swiper(".swiper",{slidesPerView:"auto",spaceBetween:10,centeredSlides:!0,loop:!0,grabCursor:!0,autoplay:{delay:5e3,disableOnInteraction:!1},navigation:{nextEl:".swiper-button-next",prevEl:".swiper-button-prev"},pagination:{el:".swiper-pagination",clickable:!0,renderBullet:function(a,e){return`<span class="${e} custom-bullet"></span>`}}}),console.log("Swiper initialized successfully!")});document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll("[x-cloak]").forEach(a=>a.style.display="none")});function M(a){let e=0;const i=n=>{e=n,a.innerHTML=`count is ${e}`};a.addEventListener("click",()=>i(e+1)),i(0)}document.addEventListener("DOMContentLoaded",()=>{const a=document.getElementById("counter-btn");a&&M(a)});document.addEventListener("DOMContentLoaded",function(){document.querySelectorAll(".faq-btn").forEach(e=>{e.addEventListener("click",function(){const i=this.nextElementSibling,n=this.querySelector(".faq-icon");document.querySelectorAll(".faq-answer").forEach(s=>{s!==i&&(s.classList.add("hidden"),s.previousElementSibling.querySelector(".faq-icon").classList.remove("fa-chevron-up"),s.previousElementSibling.querySelector(".faq-icon").classList.add("fa-chevron-down"))}),i.classList.contains("hidden")?(i.classList.remove("hidden"),n.classList.remove("fa-chevron-down"),n.classList.add("fa-chevron-up")):(i.classList.add("hidden"),n.classList.remove("fa-chevron-up"),n.classList.add("fa-chevron-down"))})})});document.addEventListener("DOMContentLoaded",()=>{const a=document.getElementById("dropdownButton"),e=document.getElementById("dropdownMenu"),i=document.getElementById("chevronIcon");a.addEventListener("mouseenter",()=>{e.classList.remove("hidden"),i.classList.add("rotate-90")}),a.addEventListener("mouseleave",()=>{setTimeout(()=>{e.matches(":hover")||(e.classList.add("hidden"),i.classList.remove("rotate-180"))},200)}),e.addEventListener("mouseleave",()=>{e.classList.add("hidden"),i.classList.remove("rotate-90")})});document.addEventListener("DOMContentLoaded",function(){const a=[{title:"Official Result of DFAMPC Election",date:"April 2, 2025",image:"DFAMPC Assets/latest.webp",description:`The Election Committee is pleased to announce the result of the DFAMPC
+        Elections held from 25 to 28 March 2025 in the Foreign Service Posts,
+        DFA Home Office, DFA OCA Aseana, Consular Offices, and Satellite Offices.<br><br>
+        Done this 2nd day of April 2025, in Pasay City, Philippines`},{title:"An invitation to the community of DoubleDragon Tower!",date:"March 20, 2025",image:"DFAMPC Assets/upcoming1.webp",description:`An invitation to the community of DoubleDragon Tower!<br>
+            WHAT: Free Zumba classes, twice a week<br>
+            WHEN: Tuesdays and Thursdays at 5:30 pm<br>
+            WHERE: Mess Hall, 6th floor, DoubleDragon Tower`},{title:"1st Year Zumba Class Anniversary",date:"March 20, 2025",image:"DFAMPC Assets/zumba1.webp",description:`Get Ready to move, groove, and celebrate!<br><br>
+          DFA Multipurpose Cooperative (DFAMPC) is pleased to invite the community to the 1st Year
+          Anniversary Celebration of DFA Multipurpose- Cooperative Zumba Class - a fun-filled evening
+          dedicated to camaraderie, dedication, fitness and high-energy dance workout. This milestone
+          marks a year of enthusiasm, dedication, and the DFAMPC's commitment to a healthier and
+          more active lifestyle for its stakeholders.<br><br>
+          The details of the event are as follows:<br>
+          Date: March 20, 2025<br>
+          Time: 5:00 pm - 7:00 pm<br>
+          Venue: 6th floor, Mess Hall, Double Dragon Tower, Meridian Park, Pasay City<br><br>
+          During the event, we will be recognizing outstanding participants in the following categories:<br>
+          - Most Active Participants<br>
+          - Most Energetic<br>
+          - Best Zumba Outfit<br><br>
+          To add more energy and vibrancy to the celebration, all participants are encouraged to wear
+          colorful and best Zumba outfits, and other surprises.<br><br>
+          We hope to see you there. Save the date!`},{title:"End of Campaign Period",date:"March 12, 2025",image:"DFAMPC Assets/no-image.webp",description:`The Election Committee officially announces that the campaign period will conclude today, 12
+            March 2024. No further campaigning, posting, or vote solicitation will be allowed. Additionally,
+            please ensure that all social media posts are removed.<br><br>
+            All candidates are required to comply with the election guidelines set by the cooperative.<br><br>
+            Lastly, we would like to express our gratitude to all candidates and members who participated in
+            this election process. We wish for a successful DFAMPC election for the year 2025.`},{title:"MOA Signing for Online Passport Appointment",date:"March 8, 2025",image:"DFAMPC Assets/past2.webp",description:`The Department of Foreign Affairs Multi-purpose Cooperative (DFAMPC) and FSI Skyward
+            Logistics, Inc, signed a Memorandum of Agreement (MOA) for Online Passport Appointment
+            System.<br><br>
+            Signed by the Chairperson Richard T. Billedo for DFAMPC and Mr. Rex C. Latuño, President
+            and Chief Executive Officer of Skyward, the MOA signifies the partnership between the two
+            parties to provide a better solution to address and restore the need for an efficient, accurate,
+            and fast delivery service for the Office of Consular Affairs' passport applicants.<br><br>
+            Furthermore, the partnership aims to improve not only the delivery of passports, but also other
+            consular documents i.e. apostille documents, records verification, etc. by utilizing the technical
+            expertise of Skyward to develop and host the required platform that can integrate courier
+            management, distribution and delivery tracking.<br><br>
+            FSI Skyward Logistics, Inc. is a corporation in the Philippines engaged in the business of
+            developing and providing technology integration services, platforms, programming, software
+            engineering, hardware integrations and other information systems.`},{title:"Oath-taking Ceremony for the Health and Wellness and Mediation System",date:"March 8,2025",image:"DFAMPC Assets/past3.webp",description:`The department of Foreign Affairs Multi-Purpose Cooperative (DFAMPC), through its
+            Chairperson Richard T. Billedo officiated the oath-taking ceremony of three (3) new members of
+            the Health and Wellness and Mediation and Conciliation Committees.<br><br>
+            Mr. John Carl T. Talan was inducted as the newest member of the Health and Wellness
+            Committee. Whereas, Ms. Aleksey Diane S. Galvez and Mr. Luigi Kyle V. Rosales are the new
+            members of the Mediation and Conciliation Committee.<br><br>
+            The Health and Wellness Committee is responsible for formulating and implementing health and
+            wellness programs for members and the DFA community. Whereas, the Mediation and
+            Conciliation Committee is primarily responsible in settling all problems that may arise within the
+            members of DFAMPC.`},{title:"MOA Signing for Courier Services",date:"March 8, 2025",image:"DFAMPC Assets/past4.webp",description:`The Department of Foreign Affairs Multi-Purpose Cooperative (DFAMPC) and Wide Wide World
+            Express Corporation (W Express) signed a memorandum of Agreement for Courier Services.<br><br>
+            The MOA was signed by Chairperson Richard T. Billedo for DFAMPC and Mr. Dexter Carlota,
+            Senior Vice-President for Revenue Management, W Express.<br><br>
+            W Express is a company in the Philippines engaged in courier, forwarding, sea freight, and other
+            logistics-related services. The company has been in the business for over 52 years and is
+            considered one of the best in the industry. W Express has been a steadfast partner of the
+            DFAMPC since they set-up booth in the DFA Office of Consular Affairs (OCA) in March 2005 to
+            November 2020.<br><br>
+            The two parties recognized the need to provide better, reliable, secured, and fast delivery
+            services of documents for the DFA's client and the agreement is a culmination of a year-long 
+            negotiation.`}],e=new Date,i=a.filter(o=>new Date(o.date)>e),n=a.filter(o=>new Date(o.date)<e);console.log("Upcoming Events:",i),console.log("Past Events:",n);const s=7,c=[...i,...n];let h=1;const x=document.getElementById("latestEventContainer");document.getElementById("latestEventContainer1");const y=document.getElementById("eventsList"),v=document.getElementById("pastEventsList"),w=document.getElementById("noEvents"),g=document.getElementById("pastEventsSection");document.getElementById("upcomingEventsSection"),document.querySelector(".pagination-container"),i.length>0?f(i[0]):n.length>0&&(n.sort((o,u)=>new Date(u.date)-new Date(o.date)),f(n[0]));function b(o){y.innerHTML="",v.innerHTML="",w.classList.add("hidden");const u=(o-1)*s,m=o*s,l=c.slice(u,m),d=l.filter(t=>new Date(t.date)>e),p=l.filter(t=>new Date(t.date)<=e);d.length===0?w.classList.remove("hidden"):d.forEach(t=>{const r=document.createElement("li");r.classList.add("event-item","flex","gap-2","cursor-pointer"),r.innerHTML=`
+                <div class="w-42 h-24 overflow-hidden flex-none">
+                    <img src="${t.image}" alt="${t.title}" class="w-full h-full object-fill border border-[#198754] rounded-lg">
+                </div>
+                <div>
+                    <a href="#" class="text-black text-xs font-semibold block">${t.title}</a>
+                    <span class="bg-[#F1F1F1] mt-0.5 text-black text-[10px] px-3 w-[113px] py-1 rounded-full flex items-center">
+                        <img src="DFAMPC Assets/calendar-black.webp" alt="Calendar Icon" class="w-3 h-3 mr-1">${t.date}
+                    </span>
+                    <p class="text-black line-clamp-1 text-[10px] mt-1 font-normal">${t.description}</p>
+                </div>
+            `,r.addEventListener("click",()=>f(t)),y.appendChild(r)}),o===1&&d.length===7?g.classList.add("hidden"):g.classList.remove("hidden"),o>1&&w.classList.add("hidden"),p.forEach(t=>{const r=document.createElement("li");r.classList.add("past-event-item","flex","gap-2","cursor-pointer"),r.innerHTML=`
+             <div class="w-34 sm:w-42 h-24 overflow-hidden flex-none">
+                <img src="${t.image}" alt="${t.title}" class="w-full h-full object-fill border border-[#198754] rounded-[10px]">
+            </div>
+            <div>
+                <a href="#" class="text-black text-xs font-semibold line-clamp-1">${t.title}</a>
+                <span class="bg-[#F1F1F1] mt-0.5 text-black text-[10px] px-3 w-[113px] py-1 rounded-full flex items-center">
+                    <img src="DFAMPC Assets/calendar-black.webp" alt="Calendar Icon" class="w-3 h-3 mr-1">${t.date}
+                </span>
+                <p class="text-black line-clamp-1 text-[10px] mt-1 font-normal">${t.description}</p>
+            </div>
+        `,r.addEventListener("click",()=>f(t)),v.appendChild(r)}),E(o)}function E(o){const u=document.querySelectorAll(".page-number"),m=document.querySelector(".prev"),l=document.querySelector(".next"),d=Math.ceil(a.length/7);o<1&&(o=1),o>d&&(o=d),m.disabled=o===1,l.disabled=o===d,u.forEach((p,t)=>{const r=t+1;p.classList.toggle("hidden",r!==o),r===o?(p.classList.add("bg-green-700","text-white"),p.classList.remove("bg-white","border","text-black")):(p.classList.add("bg-white","border","text-black"),p.classList.remove("bg-green-700","text-white"))}),m.addEventListener("click",()=>b(o-1)),l.addEventListener("click",()=>b(o+1));for(let p=0;p<u.length;p++){const t=p+1;if(t<=d){const r=u[p];r.textContent=t,r.classList.remove("hidden"),r.addEventListener("click",()=>b(t))}else u[p].classList.add("hidden")}}b(h);function f(o){console.log("Displaying event:",o),x.innerHTML=`
+              <div class="w-full flex justify-center items-center">
+                <img src="${o.image}" alt="Event Image" class="event-image w-4/6">
+              </div>
+            
+              <div class="mt-4 block">
+                  <p class="event-title text-[#222222] font-[700] text-[29px] mt-4">${o.title}</p>
+                  <div class="flex items-center space-x-2 text-sm mt-2">
+                      <span class="bg-[#F2FFEB] text-[15px] text-[#198754] px-3 py-1 rounded-full">Event</span>
+                      <span class="event-date bg-[#F1F1F1] text-[15px] text-[#222222] px-3 py-1 rounded-full flex items-center">
+                          <img src="DFAMPC Assets/calendar.webp" alt="Calendar Icon" class="w-4 h-4 mr-1"> ${o.date}
+                      </span>
+                  </div>
+                  <p class="text-[#222222] text-[15px] mt-4">${o.description}</p>
+              </div>
+          `}});document.addEventListener("DOMContentLoaded",function(){const a=document.querySelectorAll(".lg\\:flex a"),e=document.getElementById("dropdownButton");a.forEach(n=>{window.location.pathname.includes(n.getAttribute("href"))&&n.classList.add("text-[#198754]","after:h-[1.5px]","after:scale-x-100")}),["about-us.html","organizational-chart.html","management-chart.html","business-and-services.html","faqs.html"].some(n=>window.location.pathname.includes(n))&&e.classList.add("text-[#198754]","after:scale-x-100")});document.addEventListener("DOMContentLoaded",()=>{const a=document.getElementById("menu-toggle"),e=document.getElementById("sidebar"),i=document.getElementById("close-sidebar"),n=document.getElementById("overlay");document.getElementById("about-toggle"),document.getElementById("about-menu"),document.getElementById("about-icon"),a.addEventListener("click",()=>{e.classList.remove("translate-x-full"),n.classList.remove("hidden")}),i.addEventListener("click",()=>{e.classList.add("translate-x-full"),n.classList.add("hidden")}),n.addEventListener("click",()=>{e.classList.add("translate-x-full"),n.classList.add("hidden")})});document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("job-listings"),i=document.querySelector("#pagination"),n=document.getElementById("jobModal"),s=document.getElementById("closeModal"),c=document.getElementById("modalJobTitle"),h=document.getElementById("modalJobDate"),x=document.getElementById("modalJobLocation"),y=document.getElementById("modalJobType"),v=document.getElementById("modalJobDescription"),w=document.getElementById("modalJobResponsibilities");let g=1;const b=[{title:"Accounting Assistant",date:"February 25, 2025",location:"Makati City",type:"Full-Time",description:"We are looking for a detail-oriented and proactive Accounting Assistant to support our financial operations. The ideal candidate will be responsible for managing daily accounting tasks, ensuring accuracy in financial records, and assisting with reports and reconciliations. This role requires strong organizational skills, attention to detail, and the ability to work efficiently in a fast-paced environment while maintaining a high level of accuracy and professionalism.",responsibilities:["Assist in managing financial transactions, including accounts payable and receivable.","Prepare and process invoices, expense reports, and reimbursements","Maintain accurate financial records and ensure proper documentation of all transactions.","Reconcile bank statements and assist in month-end and year-end closing processes.","Support the preparation of financial reports, budgets, and tax filings.","Assist in payroll processing by ensuring accurate data entry and record-keeping.","Ensure compliance with company policies, accounting principles, and government regulations.","Coordinate with vendors and clients to resolve billing discrepancies and payment issues.","Provide administrative support to the accounting team, including data entry and file organization.","Use accounting software to update records and generate reports.","Assist in audits by preparing necessary documentation and responding to inquiries.","Collaborate with other departments to streamline financial processes and improve efficiency."]},{title:"Administrative Officer",date:"February 28, 2025",location:"Pasay City",type:"Full-Time",description:"We are looking for an organized and detail-oriented Administrative Officer to join our team. The ideal candidate will handle a variety of administrative tasks, including managing office supplies, organizing files, and providing support to various departments. This role is crucial in ensuring the smooth operation of our office and contributing to a positive work environment.",responsibilities:["Handle daily administrative tasks including managing office supplies and equipment.","Maintain and organize office files, documents, and records.","Assist in scheduling meetings, appointments, and travel arrangements.","Coordinate with various departments to ensure smooth workflow and communication.","Prepare and process correspondence, reports, and presentations.","Provide support for office events and activities.","Handle incoming calls, emails, and other forms of communication.","Assist in managing office budgets and expenses."]},{title:"General Manager",date:"February 28, 2025",location:"Pasay City",type:"Full-Time",description:"We are seeking an experienced and dynamic General Manager to oversee all daily operations of our organization. The successful candidate will be responsible for ensuring the efficiency of business operations, managing resources, and driving the company’s long-term success. This role requires strong leadership, decision-making abilities, and the capability to oversee multiple departments while fostering a positive and productive workplace culture.",responsibilities:["Develop and implement strategies to ensure company growth and profitability.","Oversee the daily operations of various departments, including finance, sales, marketing, human resources, and production.","Set performance goals for each department and monitor progress.","Analyze financial reports and prepare budgets to ensure profitability and sustainable business practices.","Ensure the company operates in compliance with all laws and regulations.","Lead and mentor department heads, fostering an environment of accountability and continuous improvement.","Establish and maintain relationships with clients, vendors, and business partners.","Identify and pursue business opportunities for expansion or partnerships.","Implement and refine processes for operational efficiency.","Lead company meetings and provide progress updates to stakeholders."]}],E=Math.ceil(b.length/4);function f(m){g=m,e.innerHTML="";const l=(m-1)*4,d=m*4;b.slice(l,d).forEach((t,r)=>{const L=document.createElement("div");L.className="bg-white border border-[#D9D9D9] rounded-lg p-4",L.innerHTML=`
+          <h3 class="text-base font-semibold text-[#222222]">${t.title}</h3>
+          <div class="flex flex-wrap items-center gap-1.5 text-[#222222] text-xs mt-2">
+            <span class="flex items-center px-2 py-1 rounded-full bg-[#F1F1F1] gap-0.3">
+              <img src="DFAMPC Assets/calendar-black.webp" class="w-4 h-4 mr-1"><span>${t.date}</span>
+            </span>
+            <span class="flex items-center px-2 py-1 rounded-full bg-[#F1F1F1] gap-0.3">
+              <img src="DFAMPC Assets/location-black.webp" class="w-4 h-4 mr-1"><span>${t.location}</span>
+            </span>
+            <span class="flex items-center px-2 py-1 rounded-full bg-[#F1F1F1] gap-1">${t.type}</span>
+          </div>
+          <p class="text-[#222222] line-clamp-3 text-xs mt-3">${t.description}</p>
+          <button class="text-[#198754] font-semibold text-xs mt-4 inline-flex items-center" data-index="${r}">
+            View Details
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M9 5l7 7-7 7" />
+            </svg>
+            </button>
+        `,e.appendChild(L)}),o()}function o(){i.innerHTML="";const m=u("«",()=>f(1)),l=u("‹",()=>g>1&&f(g-1));i.appendChild(m),i.appendChild(l);for(let t=1;t<=E;t++){const r=document.createElement("button");r.textContent=t,r.className=`w-7 h-7 flex items-center justify-center border text-[12px] font-[400] ${t===g?"bg-green-700 text-white":"bg-white text-black"}`,r.addEventListener("click",()=>f(t)),i.appendChild(r)}const d=u("›",()=>g<E&&f(g+1)),p=u("»",()=>f(E));i.appendChild(d),i.appendChild(p)}function u(m,l){const d=document.createElement("button");return d.innerHTML=m,d.className="w-7 h-7 flex items-center justify-center text-[22px] text-[#D9D9D9] border",d.addEventListener("click",l),d}window.openJobDetails=function(m){const l=b[m];c.textContent=l.title,h.textContent=l.date,x.textContent=l.location,y.textContent=l.type,v.textContent=l.description,w.innerHTML="",l.responsibilities.forEach(d=>{const p=document.createElement("li");p.textContent=d,w.appendChild(p)}),n.style.display="flex",console.log("Modal is now visible")},s.addEventListener("click",function(){console.log("Closing modal"),n.style.display="none"}),e.addEventListener("click",function(m){const l=m.target.closest("button");if(l&&l.hasAttribute("data-index")){const d=l.getAttribute("data-index");openJobDetails(d)}}),n.style.display="none",f(g)});document.addEventListener("DOMContentLoaded",function(){const a=document.getElementById("jobModal"),e=document.getElementById("applyModal"),i=document.getElementById("closeApplyModal"),n=document.getElementById("ApplyModal"),s=document.getElementById("applyForm"),c=document.getElementById("customAlert");n.addEventListener("click",function(){e.style.display="flex",a.style.display="none"}),i.addEventListener("click",function(){e.style.display="none"}),s.addEventListener("submit",function(h){h.preventDefault();const x=document.getElementById("name").value,y=document.getElementById("email").value,v=document.getElementById("coverLetter").value;console.log("Application submitted:",{name:x,email:y,coverLetter:v}),e.style.display="none",s.reset(),c.style.display="flex",setTimeout(function(){c.style.display="none"},6e3)}),e.style.display="none",c.style.display="none"});

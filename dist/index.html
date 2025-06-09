@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+        <!-- Tailwind CSS -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Custom Styles -->
+        <link href="/src/styles.css" rel="stylesheet">
+        <link href="/tailwind.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+          
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x/dist/cdn.min.js" defer></script>
+        
+        <title>DFA Multi-Purpose Cooperative</title>
+    <script type="module" crossorigin src="/dfampc-/assets/index-BptnyqmF.js"></script>
+    <link rel="stylesheet" crossorigin href="/dfampc-/assets/index-BmQS6O9p.css">
+  </head>
+
+  <body class="font-opensans max-w-7xl">
+    <!-- Navbar -->
+    <header class="w-screen bg-white border-b-2 border-[#F1F1F1] sticky top-0 left-0 z-50 py-4 px-6">
+      <div class="container mx-auto flex items-center justify-between">
+          <!-- Logo -->
+          <div class="flex items-center space-x-2">
+              <img src="/dfampc-/assets/dfampc.logo-_74gHCc0.webp" alt="DFA Cooperative Logo" class="h-10 w-10">
+              <div class="space-y-1">
+                  <h1 class="text-sm font-normal leading-[100%] tracking-[0%] text-gray-800 hidden md:block">Republic of the Philippines</h1>
+                  <h2 class="text-sm font-bold leading-[100%] tracking-[0%] text-gray-800 hidden md:block">DFA Multi-Purpose Cooperative</h2>
+              </div>
+          </div>
+          <!-- Menu Button (Mobile) -->
+          <div class="flex gap-2">
+              <button class="lg:hidden bg-[#69C25F] p-2 rounded-lg focus:outline-none">
+                <img src="data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFDSURBVHgBzVSJbcMwDCSKDqAN6hE8gkfICN6k3iDZwN3A3UAjeAR1A3cDlgqo9sK4eoIEyAGEAoq6o04OiZ4JzBxi0KPAipYzL6UC4RskZuxcfq+aO9CtkMOdhOcyQqxt4Y7kvcSmBHGdkET3RyVPNX0teQfkHxIuU+skTiDS1Qikrk5UCW0kwpcKD+Cro8tbebjZYixzsDfkBGYtGg35xtfYjMik+TknsGpRD7kF30MFryzR/Pn2e8QBWzN7CZ2x5HyLf2p/hYp/NMG3WSOcWesAN3mDnE/eqg2O/97qE+p6za05geTtBLnaRx5TIzmBAQ7bz3SBPb/zJkH38/MJLaFKSO0RH7ZUjJYcuTwq5j3LSiI47IL625sm3vlyINYNO0OSfM3Bc+u4NkJxPsWvawXSoNYMdE8k9pYzr9SGL3o2/ACFn9oQbZkMhwAAAABJRU5ErkJggg==" alt="Track" class="h-5 w-5">
+              </button>
+              <button id="menu-toggle" class="lg:hidden text-[#222222] border p-2 rounded-lg focus:outline-none">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+              </button>
+          </div>
+          <!-- Nav Links & Button -->
+          <div class="hidden lg:flex lg:ml-20 md:hidden items-center  space-x-[20px] xl:ml-80 gap-4">
+            <a href="index.html" class="font-opensans relative font-normal mr-[-5px] text-[#222222] hover:text-[#222222] text-sm  
+                after:content-[''] after:absolute after:left-0 after:bottom-[-6px] 
+                after:h-[1.5px] after:w-full after:bg-[#198754]  
+                after:scale-x-0 after:transition-transform after:duration-300 
+                hover:after:scale-x-100">
+                Home
+            </a>
+            <a href="news-and-events.html" class="relative font-normal text-[#222222] hover:text-[#222222] text-sm 
+                after:content-[''] after:absolute after:left-0 after:bottom-[-6px] 
+                after:h-[1px] after:w-full after:bg-[#198754] 
+                after:scale-x-0 after:transition-transform after:duration-300 
+                hover:after:scale-x-100">News & Events</a>
+            <a href="careers.html" class="relative font-normal text-[#222222] hover:text-[#222222] text-sm 
+                after:content-[''] after:absolute after:left-0 after:bottom-[-6px] 
+                after:h-[1px] after:w-full after:bg-[#198754] 
+                after:scale-x-0 after:transition-transform after:duration-300 
+                hover:after:scale-x-100">Careers</a>
+            <div class="relative group dropdown">
+              <!-- Button -->
+              <button id="dropdownButton" class="py-2  flex items-center relative font-normal text-[#222222] hover:text-[#222222] text-sm  
+              after:content-[''] after:absolute after:left-0 after:bottom-0 
+              after:h-[1px] after:w-full after:bg-[#198754]  
+              after:scale-x-0 after:transition-transform after:duration-300 
+              hover:after:scale-x-100">
+                  About Us 
+                  <svg id="chevronIcon" class="w-4 h-4 ml-1 transition-transform duration-300" 
+                      fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+                  </svg>
+              </button>
+              <!-- Dropdown Menu -->
+              <div id="dropdownMenu" class="absolute mt-1 hidden group-hover:block dropdown-menu bg-white ml-[-44px] w-44 z-50">
+                <div class="h-4 bg-transparent opacity-0"></div>
+                <ul class="border">
+                  <li><a href="about-us.html" class="block px-4 py-3 text-sm font-normal text-[#222222] hover:text-[#198754]">Our Organization</a></li>
+                  <li><a href="organizational-chart.html" class="block px-4 py-3 text-sm font-normal text-[#222222] hover:text-[#198754]">Organizational Chart</a></li>
+                  <li><a href="management-chart.html" class="block px-4 py-3 text-sm font-normal text-[#222222] hover:text-[#198754]">Management Chart</a></li>
+                  <li><a href="business-and-services.html" class="block px-4 py-3 text-sm font-normal text-[#222222] hover:text-[#198754]">Business & Services</a></li>
+                  <li><a href="faqs.html" class="block px-4 py-3 text-sm font-normal text-[#222222] hover:text-[#198754]">FAQs</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Button -->
+          <a href="#" class="hidden md:hidden lg:inline-block bg-[#69C25F] text-sm text-white px-5 py-2.5 rounded-lg border border-transparent transition-colors duration-300 hover:bg-[#fff] hover:border-[#69C25F] hover:text-[#69C25F]">
+            Track Passport Delivery
+          </a>
+      </div>
+    </header>
+
+    <!-- Sidebar Navigation (Mobile) -->
+    <div id="sidebar" class="fixed top-0 right-0 w-64 md:w-72 lg:w-80 h-full bg-white shadow-lg transform translate-x-full transition-transform duration-300 z-50">
+      <!-- Sidebar Header -->
+      <div class="flex items-center justify-start px-4 py-4 border-b">
+        <button id="close-sidebar" class="text-[#222222] focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+        <h2 class="text-lg font-semibold ml-4">Menu</h2>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="p-4 flex flex-col md:flex-col space-y-2 text-[#222222]">
+        <a href="index.html" class="mobile-link hover:text-[#198754]">Home</a>
+        <a href="news-and-events.html" class="mobile-link hover:text-[#198754]">News & Events</a>
+        <a href="careers.html" class="mobile-link hover:text-[#198754]">Careers</a>
+
+        <!-- About Us (Always Visible & Indented) -->
+        <div class="relative">
+          <p class="mobile-link">About Us</p>
+          <div id="about-menu" class="ml-4 space-y-2">
+            <a href="about-us.html" class="mobile-dropdown-item mt-2 block hover:text-[#198754]">Our Organization</a>
+            <a href="organizational-chart.html" class="mobile-dropdown-item block hover:text-[#198754]">Organizational Chart</a>
+            <a href="management-chart.html" class="mobile-dropdown-item block hover:text-[#198754]">Management Chart</a>
+            <a href="business-and-services.html" class="mobile-dropdown-item block hover:text-[#198754]">Business & Services</a>
+            <a href="faqs.html" class="mobile-dropdown-item block hover:text-[#198754]">FAQs</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-40"></div>
+    
+    <!-- Banner Section -->
+    <div class="w-screen h-100 md:h-150 top-0 overflow-hidden px-0 mx-0">
+        <div class="container swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide relative">
+                <img src="/dfampc-/assets/banner1-ca7FOiK1.webp" alt="Image 1" class="w-full h-80 md:h-[34.5rem] object-cover">
+                <div class="absolute bottom-10 w-full flex justify-center">
+                  <p class="text-white text-center font-semibold text-2xl lg:text-5xl leading-none tracking-normal lg:drop-shadow-[4px_4px_0px_#007f00] drop-shadow-[2px_2px_0px_#007f00]">
+                      “Together, We Build a Brighter Future”
+                  </p>
+              </div>
+            </div>
+            <div class="swiper-slide relative">
+                <img src="/dfampc-/assets/banner2-CMSPWnPb.webp" alt="Image 2" class="w-full h-80 md:h-[34.5rem] object-cover">
+                <div class="absolute bottom-10 w-full flex justify-center">
+                  <p class="text-white text-center font-semibold text-2xl lg:text-5xl leading-none tracking-normal lg:drop-shadow-[4px_4px_0px_#007f00] drop-shadow-[2px_2px_0px_#007f00]">
+                      “Together, We Build a Brighter Future”
+                  </p>
+              </div>
+            </div>
+            <div class="swiper-slide relative">
+                <img src="/dfampc-/assets/banner3-DS8HIwrd.webp" alt="Image 3" class="w-full h-80 md:h-[34.5rem] object-top object-cover">
+                <div class="absolute bottom-10 w-full flex justify-center">
+                  <p class="text-white text-center font-semibold text-2xl lg:text-5xl leading-none tracking-normal lg:drop-shadow-[4px_4px_0px_#007f00] drop-shadow-[2px_2px_0px_#007f00]">
+                      “Together, We Build a Brighter Future”
+                  </p>
+              </div>
+            </div>
+            <div class="swiper-slide relative">
+              <img src="/dfampc-/assets/banner4-DVf9gPYh.webp" alt="Image 4" class="w-full h-80 md:h-[34.5rem] object-cover">
+              <div class="absolute bottom-10 w-full flex justify-center">
+                <p class="text-white text-center font-semibold text-2xl lg:text-5xl leading-none tracking-normal lg:drop-shadow-[4px_4px_0px_#007f00] drop-shadow-[2px_2px_0px_#007f00]">
+                    “Together, We Build a Brighter Future”
+                </p>
+            </div>
+            </div>
+              </div>
+              <!-- Navigation Buttons -->
+              <div class="swiper-button-next text-white mx-5 hidden md:block"></div>
+              <div class="swiper-button-prev text-white mx-5 hidden md:block"></div>
+              <!-- Pagination -->
+              <div class="pagination-container pt-28 relative flex justify-center -mt-16">
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Events Section -->
+    <section class="w-screen px-6 py-12 bg-white  -mt-6">
+      <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Message from the Chairperson -->
+        <div x-data="{ isOpen: false }" class="bg-white">
+          <h2 class="text-[#198754] font-bold xl:text-xl text-xl md:text-lg">
+              Message from the Chairperson
+          </h2>
+          <div>
+              <img src="/dfampc-/assets/chairperson1-D7T8sRrp.webp" alt="Chairperson" class="w-auto mt-4 border border-[#D9D9D9] rounded-lg">    
+          </div>
+          <div>
+              <p class="text-[#69C25F] text-lg font-bold mt-4">Maria Theresa Jesusa Albano</p>
+              <p class="text-[#6C757D] mt-1 text-base font-semibold">
+                  Chairperson, DFAMPC
+              </p>
+          </div>
+          <p class="text-[#222222] line-clamp-4 mt-2.5 text-xs font-normal leading-[130%] tracking-[0%]">
+            With great pride and gratitude, I address you as the Chairperson of our esteemed cooperative. Since our humble beginnings in 1991, DFAMPC has grown into a strong community dedicated to serving and uplifting its hardworking members from the DFA and its attached agencies.
+          </p>
+          <!-- Read More Button -->
+          <div class="flex"> 
+              <button @click="isOpen = true" class="mt-6 lg:mt-[117px] xl:mt-16 bg-white text-xs sm:text-sm text-[#198754] px-2 py-1 sm:px-5 sm:py-2 ml-auto border border-[#198754] transition-colors duration-300 hover:bg-[#198754] hover:border-[#198754] hover:text-white">
+                  Read more
+              </button>
+          </div>
+          <!-- Modal -->
+          <!-- Alpine.js Modal -->
+          <div x-cloak x-show="isOpen" class="fixed inset-0 bg-black bg-opacity-10 flex justify-center items-center z-50 p-5">
+            <div class="bg-white p-6 rounded-lg shadow-lg max-w-5xl sm:w-3/5 lg:w-full relative grid grid-cols-1 lg:grid-cols-3 gap-6 h-[80vh] lg:h-auto xl:h-full overflow-scroll lg:overflow-hidden">
+                <!-- Close Button -->
+                <button @click="isOpen = false" class="absolute top-4 right-4 text-[#B7B7B7] hover:text-gray-900 text-2xl">
+                    ✕
+                </button>
+
+                <!-- Image Section -->
+                <div class="relative mt-8 md:mt-0 flex justify-center items-center">
+                    <img src="/dfampc-/assets/chairperson-D5RCQIUb.webp" alt="Chairperson" class="rounded-lg h-[470px] w-full">
+                </div>
+
+                <!-- Content Section (Spans 2 Columns on Larger Screens) -->
+                <div class="md:col-span-2">
+                  <h2 class="text-[#198754] font-bold text-[22px] mt-2">Message from the Chairperson</h2>  
+                    <div class="lg:flex gap-4">
+                      <div>
+                        <p class="text-[#69C25F] text-lg font-bold mt-4">Maria Theresa Jesusa Albano</p>
+                        <p class="text-[#6C757D] text-sm font-semibold">
+                            Chairperson, DFAMPC
+                        </p>
+                        <p class="text-[#222222] lg:w-[300px] mt-4 text-xs font-normal leading-normal">
+                            It is with great pride and gratitude that I address you all as the Chairperson of our esteemed cooperative. 
+                            Since our humble beginnings in 1991, DFAMPC has grown into more than just a cooperative; we have become a 
+                            community dedicated to the service and well-being of our members. This journey of over three decades has been a 
+                            testament to the shared values and unwavering commitment we hold as a cooperative exclusive to the hardworking 
+                            members of the DFA and its attached agencies.
+                        </p>
+                        <p class="text-[#222222] lg:w-[300px] mt-4 text-xs font-normal leading-normal">
+                            As we reflect on our achievements, it is important to recognize that none of this would have been possible without 
+                            the support and trust of each of you. Together, we have built a foundation of mutual respect, integrity, and a 
+                            vision of collective success. This cooperative was created not only to serve the immediate needs of our members 
+                            but also to uplift lives, provide opportunities, and foster a sense of unity that makes us stronger.
+                        </p>
+                      </div>
+                      <div>
+                        <p class="text-[#222222] lg:w-[300px] mt-4 text-xs font-normal leading-normal">
+                          Looking ahead, we remain steadfast in our mission to innovate and expand our 
+                          services to better meet your needs. The world continues to change, and so must we. 
+                          We are actively exploring new initiatives that will further enhance our financial 
+                          sustainability, create new opportunities for growth, and ensure the continued prosperity 
+                          of every member. Your success is our success, and it will always be our goal to ensure that 
+                          DFAMPC remains a reliable partner in your journey. Let us continue to work together, with optimism 
+                          and dedication, toward a future filled with hope and success. I am confident that with your 
+                          continued support, we will achieve even greater milestones, making our cooperative a 
+                          shining example of what can be accomplished through unity and shared purpose.
+                        </p>
+                        <p class="text-[#222222] lg:w-[300px] mt-4 text-xs font-normal leading-normal">
+                          Thank you for being part of this remarkable journey. Here's to a future of 
+                          continued growth, progress, and collective success for all of us.
+                        </p>
+
+                        <p class="font-bold text-black mt-4 text-xs leading-normal">MABUHAY DFAMPC! MABUHAY TAYONG MGA MYEMBRO</p>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <!-- Latest News & Events -->
+      <div class="bg-white">
+          <h2 class="text-[#198754] font-bold xl:text-xl text-xl md:text-lg">
+            News & Events
+          </h2>
+          <div id="latestEventContainer1">
+          <div>      
+              <img src="/dfampc-/assets/zumba1-BirtrBpF.webp" alt="Driving Lessons" class="w-auto mt-4 object-fill border border-[##D9D9D9] rounded-lg">     
+          </div>
+          <div>
+            <p class="text-[#69C25F] text-lg font-bold mt-4">1st Year Zumba Class Anniversary</p>
+            <p class="text-[#6C757D] mt-1 text-xs leading-[100%] tracking-[0%] flex items-center">
+              <img src="data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAACkAAAAoCAYAAABjPNNTAAAAAXNSR0IArs4c6QAAApFJREFUWAntWOtt2zAQzggdISN4hI6QDaqfgUQBRE0SgcJztIG9gTNCN8gIHqEjaIQWH6VTZMKURL2QohZAEKTu8fGOvDvy4eH+3S3wj1sg0/QbLWYZmSIJnlQXuxi+ybRC0x+0GAGZsu/gSX8WSQzfZNovB1JK+U2Yw1uu6cyNQfJ4TA9XOz5FHy29oaNQ9vtka4ExM4cfQlHFoNbqc0PHSUCf5csjA6xXXiS5rhuD5fGYXmj7Ab6uLLG3J9aRGZLRQIWyJQv1mRmkP983Dh0cuLvRExUtnK6QUPycA1IY++QvZoq8QZAu5qnXKPekutzlezo/v5SPm4D0lcwdr2LJuaB8/jtI3yJTx7MtKboZopN12qyxwNx8kE0xwYLW6jMTV1U5r3Gc7GaIMZllKg1CVPR2YZCblVbRCFFcbF3/fTWQKP+QtdrDZ+iYakowH4V1DUs6cJrOocPnriUx1dDSIFH6tYWvpgp5nA8ZrCpUXcphAaPry6VBfgK0l1tFBtyca0q4vhwFdEmQwtg3WAixUMqy3XfOuupVdvci15egx//ePbokyNaK3n0mpIPnhbanTUCmstixFX2FDMaPxWzNfOhuHxLgKxoai719ciA1/fJp+3SAB83nuRr3CbgiHBjgBIdBkmzAVP7LxqYg2d0h1/GFT2iqeL3MI4y98NzN3l03YXJ1KG8SRExyWAk9BPh3pqwJ+MhIvWp482KFSFm9xAM/2Vo45d1wc4sNbmdXh+LpFR8LZ6aYHoBYGGIjYmTNby+h+OcMwy8mMR6ss4C9xAAErV/EwiqfQOuXjLrIKBKXFjW5Fw7Hq+w7L3Dz3gFtSsDAoqss8j6/2iJqsCRdkbFHVWRPCFXdlLma8v9e8F9+sqqyBmKLkQAAAABJRU5ErkJggg==" alt="Calendar Icon" class="w-4 h-4 mr-1"> March 20, 2025
+            </p>
+          </div>
+            <p class="text-[#222222] mt-4 text-xs line-clamp-4 font-normal leading-[130%] tracking-[0%]">
+              Get Ready to move, groove and celebrate!
+              DFA Multipurpose Cooperative (DFAMPC) is pleased to invite the community to the 1st Year
+              Anniversary Celebration of DFA Multipurpose- Cooperative Zumba Class - a fun-filled evening
+              dedicated to camaraderie, dedication, fitness and high-energy dance workout. This milestone
+              marks a year of enthusiasm, dedication, and the DFAMPC's commitment to a healthier and
+              more active lifestyle for its stakeholders.
+            </p> 
+          </div>
+          <div class="flex">
+            <button class="mt-6 lg:mt-[118px] xl:mt-16 bg-white text-xs sm:text-sm  text-[#198754] px-2 py-1 sm:px-5 sm:py-2 ml-auto border border-[#198754] transition-colors duration-300 hover:bg-[#198754] hover:border-[#198754] hover:text-white">
+                See Other News
+            </button>
+        </div>
+      </div>
+
+      <!-- Relevant Videos -->
+      <div class="lg:col-span-1 md:col-span-2">
+            <h2 class="text-[#198754] font-bold xl:text-xl text-xl md:text-xl leading-[100%] tracking-[0%]">Relevant Videos</h2>
+        <div class="mt-4 space-y-2">
+            <!-- Video 1 -->
+            <div class="flex bg-white border border-[#D9D9D9] rounded-lg p-4 items-center gap-4">
+                <img src="/dfampc-/assets/video1-YKP-SPFf.webp" class="w-30 h-20 sm:w-44 sm:h-24 border border-[#D9D9D9] rounded-md object-cover" alt="Video">
+                <div class="flex-1 flex flex-col h-20 sm:h-24">
+                  <p class="text-[#222222] items-start text-[10px] sm:text-xs font-normal  tracking-[0%]">
+                    Department of Foreign Affairs Multi Purpose Cooperative 1
+                  </p>
+                  <div class="mt-auto self-end">
+                    <button class="bg-[#fff] text-[10px] sm:text-xs text-[#198754] px-2 py-1 xl:px-4 xl:py-2 border border-[#198754] transition-colors duration-300 hover:bg-[#198754] hover:border-[#198754] hover:text-[#fff]">
+                      Watch now
+                    </button>
+                  </div>
+                </div>
+            </div>
+            <!-- Video 2 -->
+            <div class="flex bg-white border border-[#D9D9D9] rounded-lg p-4 items-center gap-4">
+              <img src="/dfampc-/assets/video2-DqPfuDOn.webp" class="w-30 h-20 sm:w-44 sm:h-24 border border-[#D9D9D9] rounded-md object-cover" alt="Video">
+              <div class="flex-1 flex flex-col h-20 sm:h-24">
+                <p class="text-[#222222] text-[10px] sm:text-xs font-normal leading-[130%] tracking-[0%]">
+                  DFAMPC 2023
+                </p>
+                <div class="mt-auto self-end">
+                  <button class="bg-[#fff] text-[10px] sm:text-xs text-[#198754] px-2 py-1 xl:px-4 xl:py-2 border border-[#198754] transition-colors duration-300 hover:bg-[#198754] hover:border-[#198754] hover:text-[#fff]">
+                    Watch now
+                  </button>
+                </div>  
+              </div>
+            </div>
+            <!-- Video 3 -->
+            <div class="flex bg-white border border-[#D9D9D9] rounded-lg p-4 items-center gap-4">
+              <img src="/dfampc-/assets/video3-D55CH4tj.webp" class="w-30 h-20 sm:w-44 sm:h-24 border border-[#D9D9D9] rounded-md object-cover" alt="Video">
+              <div class="flex-1 flex flex-col h-20 sm:h-24">
+                <p class="text-[#222222] text-[10px] sm:text-xs font-normal leading-[130%] tracking-[0%]">
+                  DFAMPC Comics Capital Build up
+                </p>
+                <div class="mt-auto self-end">
+                  <button class="bg-[#fff] text-[10px] sm:text-xs text-[#198754] px-2 py-1 xl:px-4 xl:py-2 border border-[#198754] transition-colors duration-300 hover:bg-[#198754] hover:border-[#198754] hover:text-[#fff]">
+                    Watch now
+                  </button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="flex">
+          <button class="mt-5 bg-white text-xs sm:text-sm text-[#198754] px-2 py-1 sm:px-5 sm:py-2 ml-auto border border-[#198754] transition-colors duration-300 hover:bg-[#198754] hover:border-[#198754] hover:text-white">
+              See Other Videos
+          </button>
+      </div>
+      </div>
+    </div>
+    </section>
+    
+    <footer class="w-screen bg-[#198754] text-[#F1F1F1] pt-8 pb-4 px-6">
+      <div class="container mx-auto">
+      <div class="flex items-center space-x-2">
+        <img src="/dfampc-/assets/dfampc.logo-_74gHCc0.webp" alt="DFA Cooperative Logo" class="h-10 w-10">
+        <div class="space-y-1">
+          <h1 class="text-sm font-normal leading-[100%] tracking-[0%]">Republic of the Philippines</h1>
+          <h2 class="text-sm font-normal leading-[100%] tracking-[0%]">DFA Multi-Purpose Cooperative</h2>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 :grid-cols-2 xl:grid-cols-6 xl:gap-8 md:gap-12">
+        
+        <!-- Left Section -->
+        <div class="mt-4 sm:block hidden">
+          <ul>
+            <li><a href="index.html" class="text-xs font-normal text-[#F1F1F1] hover:text-[#dadada]">Home</a></li>
+            <li><a href="new-and-events.html" class="text-xs font-normal text-[#F1F1F1] hover:text-[#dadada]">News & Events</a></li>
+            <li><a href="careers.html" class="text-xs font-normal text-[#F1F1F1] hover:text-[#dadada]">Careers</a></li>
+            <li><a href="about-us.html" class="text-xs font-normal text-[#F1F1F1] hover:text-[#dadada]">About Us</a></li>
+            <li><a href="about-us.html" class="ml-2 text-xs font-extralight text-[#F1F1F1] hover:text-[#dadada]">Our Organization</a></li>
+            <li><a href="organizational-chart.html" class="ml-2 text-xs font-extralight text-[#F1F1F1] hover:text-[#dadada]">Organizational Chart</a></li>
+            <li><a href="business-and-services.html" class="ml-2 text-xs font-extralight text-[#F1F1F1] hover:text-[#dadada]">Business and Services</a></li>
+            <li><a href="faqs.html" class="ml-2 text-xs font-extralight text-[#F1F1F1] hover:text-[#dadada]">FAQs</a></li>
+          </ul>
+          <button class= "bg-[#69C25F] text-xs text-[#F1F1F1] px-4 py-[6.5px] rounded-full mt-2 border border-[#69C25F] transition-colors duration-300 hover:bg-[#198754] hover:border-white hover:text-white">Track Passport Delivery</button>
+        </div>
+    
+        <!-- Middle Section -->
+        <div class="mt-4 xl:ml-0 py-2 md:ml-[-25px] xl:col-span-2">
+          <h3 class="font-bold text-sm text-[#F1F1F1] mb-1 leading-[100%] tracking-[0%] flex items-center">
+            <img src="data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAwdJREFUaAXtWe1R40AMdQlXwpVACekEOoAOuA6ODrgOoANKSAmUoN21/0PeoscoJvthe5N4bsxMxna81j49SU9y6Lrtb2NgY2BjAAyIyC8ReQghPHvv99578d5/6Afn+xDCi4jcicjv1bAmIrsQwpsBS9DZozqzu5ojYHEEXJxzb4iCiNwgIgSn0dnhnnPuxTqLiF08IsMw3JsUERH5YwETeOoIwHjGe//OFINzqfVNv+/7/pEMHkA/TQE+BqKO/KM92B6vaXo9At+MMbB/dic0bWJhQkmaMvOlYnd0onk6IdTM+ebGDRMmEqirdlKr2g72n81+ZzlFXSESULgmG0DnNbTvTVlJoIMomGgv7xNoOHAAspfY8+hrANBip0QicujC1XqvErs8Cpr7LNxiTg7DcEv2WJCjI3K7qF6jKHw3xCOmai6gNsr+a2m9VSntyOi8cXOk4YGMb70PIdyW7LHL1zictGXSJ8uaRioOb7lUY2ogSnQutblRpPnCoVMl8j9bTFNUyjCbrSnMU5p++5STxe+ZzyW2ah3FhlbVcgC0DlB/kluXvccCzC7quq52HewYYB8t7Z60VQuM60qR4iZcz+vUsXZd6nkwy8LMShnH4lKtYCOTQtncNpFalEJ4NUQR3yS9/AKF2b6q8dQWfK2jOVxgK2p3SYuVrRit3ExvxvHisEYZPZBX7EFJJ2ikZrBi09NIYGyI0gvncE751Ihm+woAmR40f3S3eYjzpKd6Qx2OkQDQEx8wXwQ0dYTJ4iJzuQ5rDWBzpJ5zLtYPnHDOYZKtfm9mqi1KH4IyxVRs/3xmyVHZj5Ms03CJvfgso9D3/d/FxgoGalWqYOb4trLCnlAswOOn66/MRFtUqXqrupKKhJyuGYenbqDvEnz3OA9JZhxu6sQIfHZKnUrMj/WtnbgoeHrTyomrgG/lxFXBL3ViFeDnOrEq8FOdWCX4WidWDf6UE2h8Okrzlzo2qfPqPMHMPVqJHY/TuDfX7kWfw8yPX+f0nZr/O8v+tnRRgNtmGwP/EQOfDnW1mV87rE8AAAAASUVORK5CYII=" alt="Location Icon" class="w-5 h-5 mr-3">Office
+          </h3>
+          <a href="https://maps.app.goo.gl/NRJznTiXoyPkppko9" 
+            target="_blank" 
+            class="text-xs font-extralight no-underline hover:text-[#dadada] text-[#F1F1F1]">
+              2330 Roxas Blvd, Pasay, 1300 Metro Manila
+          </a>
+          <div class="flex flex-col sm:flex-row w-full gap-4 items-start">
+            <div>
+              <h3 class="font-bold text-sm text-[#F1F1F1] mt-4 mb-2 leading-[100%] tracking-[0%] flex items-center">
+                <img src="data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAAXNSR0IArs4c6QAAAbFJREFUaAXtWO1NwzAQ7QiMwAiM0BEYgQ3oBnQD2IhROsKLk/wvfVEOnaI0OvtiV6CrVNlSffe+XCfy4RCfcCAcCAfCgXDgvzoA4Nj3/XdKCSmla+svsQG8Ffk7DMNHa8L38MglSwRVSzMAZwBPWQ12WExMACfF42huO2+bKxuYiyotpIEUQU5mCKX6xVxUaSGA15kPzBAigGP2/jOjbC/kFhqG4VNz2a5Qv+qieX4B8KyWVJ3y9EspXZY8zKBSSNK6Ue00VlyncRQzHeHZAqRA/kg101i6fhPzRUHk4BbAJrXSuOe6mLebAGm4Zxpbrgve7gLY0JuGxfWqAqR5SRpW1wWD4y7/Ad1Qz61p5LquMaoKEKCtNEpcl74cmwgg0Foai6fpdK5rcpZ5MwFCZpHG9BC6baHfc13WWcfmAkhMpVHkuhb3EAGagHceArwOeusjAa+D3vpIwOugt74kgekii+8vXnBvPTlkC1DXKmcvAW/9OI7vFNB1nf1aZX75kleA0yOSIKa+Hcy+Ylx7n5EoW4/kUpQkVTO61oRnPBCbu6GIfBSFA+FAOBAOhAN/wYEfypOEn02z7gIAAAAASUVORK5CYII=" alt="Email Icon" class="w-5 h-5 mr-3">Emails
+              </h3>
+              <div>
+                <p class="text-xs font-normal">For members:</p>
+                <a href="mailto:icare.member@dfampc.com" class="text-[#F1F1F1] text-xs font-extralight">icare.member@dfampc.com</a>
+              </div>
+              <div>
+                <p class="text-xs font-normal mt-1">For loans:</p>
+                <a href="mailto:loan.management@dfampc.com" class="text-[#F1F1F1] text-xs font-extralight">loan.management@dfampc.com</a>
+              </div>
+              <h3 class="font-bold mt-4 text-[#F1F1F1] text-sm mb-3 leading-[100%] tracking-[0%] flex items-center">Social Links</h3>
+              <div class="flex gap-2">
+                <!-- Facebook Icon -->
+                <a href=" https://www.facebook.com/dfampc.social/" target="_blank">
+                    <img src="data:image/webp;base64,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" alt="Facebook Icon" class="w-8 h-8 mr-1">
+                </a>
+                <!-- YouTube Icon -->
+                <a href="https://www.youtube.com/@DFAMPC" target="_blank">
+                    <img src="data:image/webp;base64,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" alt="YouTube Icon" class="w-8 h-8 mr-1">
+                </a>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-bold text-sm text-[#F1F1F1] sm:mt-5 mb-2 leading-[100%] tracking-[0%] flex items-center">
+                <img src="data:image/webp;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAAAXNSR0IArs4c6QAAApxJREFUWAnNWO1t3DAMzQjdoBkhI3SEbtBukGzQbNBskG6QETLCjeARKMkH3M/rPYHPYFxZouQYaIDAtkyRj49f8t3d/e9/IvItpfQeY5QY47XxPx3uzzzPvxog/gEJJw4DJiI/CUhEnkXkS80YZCAPVmtyu95pyK4i8uRRBNDGiaoDHn1FmREDxpHnotK9iyOgkE+6T/baL+6PMU4wcLlcvhYFNhZZpYckfIzxBFAi8n3DfnH50IQXkT8KypXoRHhowqPqND9eadB7PSzhReRBQXV36fP5/Kh7Pz/hTdK6+s4t5PcppTcFhG7f7VAzGjTgaaA6kjgfBQnfNDAiwFHTGh1sH2AohPAGxkbsufZoJWXva7PPgOouCheQtdANzAsYqIUDvYyJXQO/1j38bEdHzSDbAPJw2FjPRhpssHVvqrWr4fZgWWRXbG0mMQsDoUwp/VgUFG40DyfsGS4MstUKD2dfDVjpRJtSeu0e4vDGhKc6pC0wALBErfQ83Z7zjNVCyQ23iz0zD9EcN8MIEBaYspDlca8AlvYBXRr6fFwiQDd7DCOONpaB0r0aYpef5nn+rQY3nUIIS+yV9C9raAtslvBkebFxAxaMI/nrp1bFVGPYy3u4vnnVE0RmYJ0zW5tMeLqGNEO5pffDumkTVy+wDwqcD12goFO9z/QiX5x2usS6QSkwfMEwmU/IhS6rDeEhUAoMPYzlnLt0w5b79TAoAuOhEIpsb3IjKAjuAkV92mAZzlwEe0L6KaDI2g2IHR/TCHPaE319iqy0ruhnIQT8tpUVa1jfUbUe9vhVBB0tW93vAWDFHEGelEEMZoyXXLlgyJ4k4ES3Ue8GGIMBfFyYNkKAxatnJHntu+SUHbD0ghCFENhWBM94T0V/ATjru2JXBw8RAAAAAElFTkSuQmCC" alt="Phone Icon" class="w-4 h-4 mr-3">Telephone No.
+              </h3>
+              <p class="text-xs font-extralight">02-8834-4939</p>
+              <p class="text-xs font-extralight mt-1">02-8834-4829</p>
+            </div>
+          </div>
+        </div>
+    
+        <!-- Contact Us Section (Right Section) -->
+        <div class="mt-6.5 xl:col-span-3 md:col-span-2 bg-[#F1F1F1] p-6 rounded-[10px]">
+          <h2 class="font-bold text-gray-900 text-lg">Contact Us</h2>
+          <p class="font-normal text-gray-900 text-sm">For feedback, comments, or service requests, feel free to contact us!</p>
+    
+          <form class="mt-6 text-gray-900 space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label for="name" class="font-bold text-xs block mb-1">Name</label>
+                <input type="text" id="name"   class="w-full py-2 px-2 text-xs bg-[#F1F1F1] border border-gray-400
+                rounded-lg text-black focus:outline-none focus:border-[#198754]">
+              </div>
+              <div>
+                <label for="email" class="font-bold block text-xs mb-1">Email</label>
+                <input type="email" id="email"   class="w-full py-2 px-2 text-xs bg-[#F1F1F1] border border-gray-400
+                rounded-lg text-black focus:outline-none focus:border-[#198754]">
+              </div>
+            </div>
+    
+            <div class="relative">
+              <label for="subject" class="font-bold text-xs block mb-1">Subject</label>
+              <select id="subject" class="w-full p-2 bg-[#F1F1F1] italic border border-gray-400 rounded-lg text-xs font-[400] text-[#6C757D] appearance-none focus:outline-none focus:border-[#198754]">
+                  <option class="not-italic" disabled selected>Choose a Category</option>
+                  <option class="not-italic" value="category1">Category1</option>
+                  <option class="not-italic" value="category2">Category2</option>
+              </select>
+              <!-- Chevron Down Icon -->
+              <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none mt-[20px]">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#198754]" viewBox="0 0 24 24" fill="currentColor">
+                      <path fill-rule="evenodd" d="M19.707 8.293a1 1 0 00-1.414 0L12 14.586 5.707 8.293a1 1 0 00-1.414 1.414l7 7a1 1 0 001.414 0l7-7a1 1 0 000-1.414z" clip-rule="evenodd"/>
+                  </svg>
+              </div>
+            </div>
+    
+            <div>
+              <label for="message" class="font-bold text-xs block mb-1">Message</label>
+              <textarea id="message" rows="3" class="w-full text-xs p-2 bg-[#F1F1F1] border border-gray-400 rounded-lg text-black focus:outline-none focus:border-[#198754]"></textarea>
+            </div>
+    
+            <div class="text-right">
+              <button class= "bg-[#69C25F] text-xs text-white px-4 py-2 rounded-2xl ml-auto border border-[#69C25F] transition-colors duration-300 hover:bg-[#f1f1f1] hover:border-[#69C25F] hover:text-[#69C25F]">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Bottom Section -->
+      <div class="flex justify-center items-center text-[#f1f1f1] mt-12">
+        <p class="text-xs sm:text-sm text-center font-normal">Copyright © 2024 DFA Multi-Purpose Cooperative
+        </p>
+        <span class="h-7 w-px bg-white mx-4"></span>
+        <p class="text-xs sm:text-sm text-center font-normal">Developed and Powered by <img src="/dfampc-/assets/skyward-4-VlnW2x.webp" alt="Skyward Logo" class="h-4 sm:h-6 inline"></p>
+      </div>
+    </div> 
+    </footer>
+
+  </body>
+</html>
